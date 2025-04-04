@@ -8,13 +8,13 @@ body {
     height: 100vh;
 }
 .hero {
-    padding: 80px 20px;
-    background: rgba(255, 255, 255, 0.1);
-    color: rgb(144, 144, 144);
+    padding: 40px 10px;
+    background: rgba(253, 253, 253, 0.1);
+    color: rgb(255, 255, 255);
 }
 
 h1 {
-    font-size: 2.8em;
+    font-size: 2.4em;
     font-weight: bold;
 }
 
@@ -33,8 +33,8 @@ p {
 }
 
 .service {
-    background: black;
-    color: rgb(142, 142, 142);
+    background: rgb(237, 112, 191);
+    color: rgb(255, 255, 255);
     padding: 20px;
     border-radius: 10px;
     width: 250px;
@@ -52,8 +52,8 @@ p {
 }
 
 .reason {
-    background: black;
-    color: rgb(146, 146, 146);
+    background: rgb(229, 156, 237);
+    color: rgb(255, 255, 255);
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
@@ -63,8 +63,8 @@ p {
 }
 
 .cta button {
-    background: rgb(0, 0, 0);
-    color: rgb(255, 102, 102);
+    background: rgb(187, 139, 209);
+    color: rgb(255, 255, 255);
     padding: 15px 30px;
     font-size: 18px;
     font-weight: bold;
@@ -87,7 +87,7 @@ p {
 }
 
 .contact h2 {
-    color: #333;
+    color: #ffffff;
     font-size: 22px;
     margin-bottom: 15px;
 }
@@ -108,8 +108,8 @@ p {
 }
 
 .contact button {
-    background: #7a5cff;
-    color: rgb(156, 156, 156);
+    background: #886262;
+    color: rgb(255, 255, 255);
     font-size: 18px;
     padding: 10px;
     border: none;
@@ -122,7 +122,7 @@ p {
 }
 
 .contact button:hover {
-    background: #4e4868;
+    background: #845858;
 }
 
 .contact button i {
