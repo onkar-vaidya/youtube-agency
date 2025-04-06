@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, rgba(28, 0, 0, 0.8), rgba(74, 0, 0, 0.8)),
+              url('assets/bg-colour.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: #ffcc00;
+}
+
+section {
+  padding: 6rem 2rem 4rem;
+  text-align: center;
+}
+
+.custom-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to right, #330000, #1a0000);
+  border-bottom: 2px solid yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 2rem;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(255, 255, 0, 0.2);
+}
+
+.custom-header .nav-toggle {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: none;
+  background: none;
+  border: 2px solid yellow;
+  font-size: 1.5rem;
+  color: yellow;
+  border-radius: 6px;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.custom-header .brand-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-header .brand-logo img {
+  max-width: 220px;
+  height: auto;
+}
+
+.custom-header nav {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.custom-header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-header nav ul li a {
+  text-decoration: none;
+  color: yellow;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.custom-header .nav-toggle {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: block; /* Always show hamburger */
+  background: none;
+  border: 2px solid yellow;
+  font-size: 1.5rem;
+  color: yellow;
+  border-radius: 6px;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.custom-header nav {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 80%;
+  background: #1a0000;
+  display: none;
+  flex-direction: column;
+  border-right: 2px solid yellow;
+  padding: 1rem;
+  z-index: 1001;
+}
+
+.custom-header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-header nav ul li a {
+  text-decoration: none;
+  color: yellow;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.custom-header nav ul li a:hover {
+  border-color: yellow;
+  background: rgba(255, 255, 0, 0.1);
+  color: white;
+}
+
+.custom-header nav.show {
+  display: flex;
+}
+
+.benefits, .services, .reasons, .process {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.benefit, .service, .reason, .step {
+  background: #000;
+  border: 2px solid yellow;
+  padding: 1.2rem;
+  border-radius: 10px;
+  width: 280px;
+  color: yellow;
+  font-weight: 600;
+}
+
+.contact form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact input, .contact textarea {
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact button {
+  padding: 1rem;
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
