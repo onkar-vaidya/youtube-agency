@@ -184,3 +184,45 @@ section {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.process {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  text-align: center;
+  flex-direction: row;
+}
+
+.step {
+  background-color: black;
+  color: yellow;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: 2px solid yellow;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  flex-shrink: 0;
+}
+
+.arrow {
+  color: yellow;
+  font-size: 2rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* Make steps vertical on mobile */
+@media (max-width: 600px) {
+  .process {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .arrow {
+    transform: rotate(90deg);
+    font-size: 1.5rem;
+  }
+}
