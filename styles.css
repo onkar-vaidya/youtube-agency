@@ -383,14 +383,16 @@ section {
 .bar-text {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
   justify-content: center;
-  font-size: 0.65rem;
+  font-size: 0.5rem;
   font-weight: bold;
   color: #FFD700;
   text-align: center;
+  padding: 5px 10px;
 }
+
 
 .bar-item {
   white-space: nowrap;
@@ -446,4 +448,4 @@ section {
   margin: 10px auto 20px;
   max-width: 90%;
   line-height: 1.5;
-}
+}                                                                                                     
