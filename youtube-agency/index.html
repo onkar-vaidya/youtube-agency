@@ -1,13 +1,193 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YouTube Agency</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="custom-header">
+    <button id="navToggle" class="nav-toggle" aria-label="Toggle Menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </button>
+  
+    <div class="brand-logo">
+      <img src="assets/brand-logo_cleaned.png" alt="Brand Logo">
+    </div>
+  
+    <nav id="mainNav" class="nav-menu">
+      <div class="nav-back-button">
+        <button id="back-btn">← Back</button>
+      </div>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#why-social-media">Why Social Media</a></li>
+        <li><a href="#what-we-offer">What We Offer</a></li>
+        <li><a href="#how-we-work">How We Work</a></li>
+        <li><a href="#why-choose-us">Why Choose Us?</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="custom-intro-bar vertical">
+    <div class="bar-text-vertical">
+      <span class="bar-item">PERSONAL BRAND</span>
+      <img src="assets/arrow-yellow.png" alt="arrow" class="bar-arrow-img" />
+      <span class="bar-item">CREDIBILITY</span>
+      <img src="assets/arrow-yellow.png" alt="arrow" class="bar-arrow-img" />
+      <span class="bar-item">BUSINESS OPPORTUNITIES</span>
+    </div>
+  </div>
+  
+  
+  <div class="strategy-line">
+    We craft powerful strategies to build trust, grow your audience, and turn visibility into valuable business opportunities.
+  </div>
+  <div class="section-divider">
+    <span>•</span>
+    <span>•</span>
+    <span>•</span>
+  </div>
+  
+
+<section id="why">
+  <h2>Why Social Media?</h2>
+  <div class="benefits">
+    <div class="benefit">Increase Reach</div>
+    <div class="benefit">Build Community</div>
+  </div>
+</section>
+<div class="section-divider">
+  <span>•</span>
+  <span>•</span>
+  <span>•</span>
+</div>
+        <section class="offer-section">
+      <h2 class="offer-heading">WHAT WE OFFER</h2>
+      <div class="offer-cards">
+    
+        <div class="offer-card">
+          <img src="assets/youtube-icon.png" alt="YouTube Icon" class="offer-icon" />
+          <h3 class="offer-title">YOUTUBE GROWTH</h3>
+          <ul class="offer-list">
+            <li>Content Strategy</li>
+            <li>Content Creation</li>
+            <li>SEO</li>
+            <li>Data-driven Growth</li>
+          </ul>
+        </div>
+    
+        <div class="offer-card">
+          <img src="assets/target-icon.png" alt="Target Icon" class="offer-icon" />
+          <h3 class="offer-title">PERSONAL BRAND BUILDING</h3>
+          <ul class="offer-list">
+            <li>Strategy</li>
+            <li>Optimization</li>
+            <li>Authority Positioning</li>
+            <li>Everything Else</li>
+          </ul>
+        </div>
+    
+        <div class="offer-card">
+          <img src="assets/three-icons.png" alt="Social Media Icons" class="offer-icon" />
+          <h3 class="offer-title">SOCIAL MEDIA MANAGEMENT</h3>
+          <ul class="offer-list">
+            <li>Handle any of your social media accounts</li>
+            <li>With a proper strategy</li>
+            <li>To get the desired results</li>
+          </ul>
+        </div>
+    
+      </div>
+    </section>
+    
+</section>
+
+
+<section id="how-we-work">
+  <h2>How We Work</h2>
+  <div class="work-steps">
+    <div class="work-step">
+      <div class="step-box">Strategy</div>
+      <div class="arrow">➜</div>
+    </div>
+    <div class="work-step">
+      <div class="step-box">Content Creation</div>
+      <div class="arrow">➜</div>
+    </div>
+    <div class="work-step">
+      <div class="step-box">Execution</div>
+      <div class="arrow">➜</div>
+    </div>
+    <div class="work-step">
+      <div class="step-box">Data Analysis</div>
+      <div class="arrow">➜</div>
+    </div>
+    <div class="work-step">
+      <div class="step-box">Strategy</div>
+    </div>
+  </div>
+</section>
+
+  
+<div class="section-divider">
+  <span>•</span>
+  <span>•</span>
+  <span>•</span>
+</div>
+  
+ 
+  <section class="expertise-section">
+    <h2 class="expertise-heading">OUR EXPERTISE</h2>
+    <div class="expertise-stats">
+      <div class="stat">
+        <p class="stat-title">YOUTUBE MANAGEMENT</p>
+        <h3 class="stat-value yellow">40+</h3>
+        <p class="stat-desc">MONETIZED CHANNELS</p>
+      </div>
+      <div class="stat">
+        <p class="stat-title">SCALE</p>
+        <h3 class="stat-value white">100M+</h3>
+        <p class="stat-desc">MONTHLY VIEWS</p>
+      </div>
+      <div class="stat">
+        <p class="stat-title">INDUSTRIES</p>
+        <h3 class="stat-value yellow">10+</h3>
+        <p class="stat-desc">DIFFERENT NICHES</p>
+      </div>
+    </div>
+  </section>
+  <div class="section-divider">
+    <span>•</span>
+    <span>•</span>
+    <span>•</span>
+  </div>
+  
+
+  <section id="contact">
+      <div class="simple-contact-info">
+        <h3 class="sub-heading">CONTACT NOW!</h3>
+        <p class="contact-line"><i class="fas fa-phone"></i> 8975022905</p>
+        <p class="contact-line"><i class="fas fa-phone"></i> 8329542530</p>
+        <p class="contact-line"><i class="fas fa-envelope"></i> INFO@socialbrains.in</p>
+      </div>
+    
+    <form id="contactForm">
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    
+    <div id="popupMessage" class="popup-box">
+      <p>Thanks! We'll get back to you ASAP.</p>
+    </div>
+    

@@ -8,8 +8,8 @@
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "build:css": "tailwindcss -i ./styles.css -o ./dist/output.css --watch"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/onkar-vaidya/youtube-agency.git"
