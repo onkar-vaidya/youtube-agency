@@ -19,7 +19,6 @@ section {
   text-align: center;
 }
 
-/* Hamburger icon (just 3 bars) */
 .nav-toggle {
   position: absolute;
   top: 25px; /* increased from 15px */
@@ -41,9 +40,31 @@ section {
   background-color: yellow;
   border-radius: 2px;
 }
+.nav-back-button {
+  display: none;
+  width: 100%;
+  padding: 10px 15px;
+  justify-content: flex-start;
+  background-color: #1a1a1a;
+}
 
+#back-btn {
+  background-color: transparent;
+  border: 2px solid #FFD700;
+  color: #FFD700;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  padding: 5px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
 
-/* Hidden by default */
+#back-btn:hover {
+  background-color: #FFD700;
+  color: #1a1a1a;
+}
+
 .nav-menu {
   display: none;
   position: absolute;
@@ -226,11 +247,15 @@ section {
   
   .stat-title,
   .stat-desc {
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: white;
     text-shadow: 1px 1px #ff0000;
     font-family: 'Montserrat', sans-serif;
+  }
+  .stat:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
   }
   
   .stat-value {
@@ -457,4 +482,87 @@ section {
   color: #FFD700;
   margin: 25px 0;
   letter-spacing: 5px;
+}
+
+.offer-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.offer-heading {
+  font-size: 2rem;
+  color: #FFD700;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 2px 2px #ff0000;
+  margin-bottom: 30px;
+}
+
+.offer-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.offer-card {
+  border: 2px solid #ff0000;
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+  background-color: transparent;
+  box-shadow: 0 0 15px #ff0000;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.offer-card:hover {
+  transform: scale(1.03);
+}
+
+.offer-icon {
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.offer-title {
+  font-size: 1.3rem;
+  color: white;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px red;
+}
+
+.offer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  text-align: left;
+  display: table;
+}
+
+.offer-list li::before {
+  content: "• ";
+  color: #ffffff;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+}
+
+
+
+@media (min-width: 768px) {
+  .offer-cards {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
 }
