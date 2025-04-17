@@ -319,7 +319,6 @@ section {
   margin: 4px 0;
 }
 
-/* Form Styles */
 #contact form {
   display: flex;
   flex-direction: column;
@@ -563,5 +562,131 @@ section {
     flex-direction: row;
     justify-content: center;
     gap: 40px;
+  }
+}
+
+.section {
+  padding: 4rem 1rem;
+}
+
+.dark-red-gradient {
+  background: linear-gradient(to right, #c21717, #7a0d0d);
+}
+
+.black-box {
+  background-color: #000;
+  color: #FFD700;
+  padding: 3rem 1rem;
+}
+
+.yellow-text {
+  color: #FFD700;
+}
+
+.expertise-grid {
+  display: flex;
+}
+
+.who-we-are-section {
+  background: transparent;
+  padding: 30px 20px 10px;
+  text-align: center;
+}
+
+.who-we-are-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: yellow;
+  margin-bottom: 10px;
+}
+
+.who-we-are-description {
+  font-size: 1.2rem;
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.why-choose-us-section {
+  background: transparent;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.why-choose-us-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: yellow;
+  margin-bottom: 40px;
+}
+
+.why-choose-us-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.why-choose-us-card {
+  background: #333;
+  padding: 30px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 10px auto;
+}
+
+.why-choose-us-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: yellow;
+  margin-bottom: 20px;
+}
+
+.card-description {
+  font-size: 1.1rem;
+  color: white;
+  margin-top: 15px;
+}
+
+.card-image {
+  max-width: 100%;
+  height: auto;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .why-choose-us-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .why-choose-us-card {
+    width: 90%; /* Stacked on mobile */
+    max-width: 350px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-choose-us-heading {
+    font-size: 2rem;
+  }
+
+  .card-heading {
+    font-size: 1.5rem;
+  }
+
+  .card-description {
+    font-size: 1rem;
   }
 }

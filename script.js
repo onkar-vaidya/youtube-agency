@@ -1,19 +1,25 @@
-document.getElementById("navToggle").addEventListener("click", () => {
-  document.getElementById("mainNav").classList.toggle("show");
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('mainNav');
+
+navToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('show');
 });
 
-document.querySelectorAll("#mainNav ul li a").forEach(link => {
-  link.addEventListener("click", () => {
-    document.getElementById("mainNav").classList.remove("show");
+const navLinks = document.querySelectorAll('.nav-menu ul li a');
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('show');
   });
 });
 
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const popup = document.getElementById("popupMessage");
-  popup.style.display = "block";
+const contactForm = document.getElementById('contactForm');
+const popupMessage = document.getElementById('popupMessage');
+
+contactForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  popupMessage.style.display = 'block';
+  contactForm.reset();
   setTimeout(() => {
-    popup.style.display = "none";
+    popupMessage.style.display = 'none';
   }, 3000);
-  this.reset();
 });
