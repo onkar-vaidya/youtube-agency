@@ -436,9 +436,18 @@ section {
 }
 
 #how-we-work {
-  padding: 20px;
+  padding: 40px 20px;
   text-align: center;
   color: #fff;
+}
+
+#how-we-work h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #FFD700;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px #a00;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .work-steps {
@@ -449,20 +458,44 @@ section {
 }
 
 .step-box {
-  background-color: #000;
+  width: 310px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 15px;
+  box-sizing: border-box;
   color: #FFD700;
-  padding: 12px 24px;
-  border-radius: 10px;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1rem;
-  box-shadow: 0 0 5px rgba(255, 215, 0, 0.6);
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.1),
+              0 8px 16px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-.arrow {
-  font-size: 1.5rem;
+
+
+.step-box:hover {
+  transform: translateY(-5px);
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.2),
+              0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.down-arrow {
+  font-size: 1.8rem;
   color: #FFD700;
   text-shadow: 1px 1px #a00;
 }
+
 
 .strategy-line {
   color: white;
