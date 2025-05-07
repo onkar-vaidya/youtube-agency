@@ -7,8 +7,11 @@
   <link rel="stylesheet" href="styles.css"/>
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
   <header class="custom-header">
@@ -91,13 +94,27 @@
     <span>•</span>
   </div>
 
-<section id="why">
-  <h2>Why Social Media?</h2>
-  <div class="benefits">
-    <div class="benefit">Increase Reach</div>
-    <div class="benefit">Build Community</div>
-  </div>
-</section>
+  <section id="whySocialMedia" class="section aos-init" data-aos="fade-up">
+    <h2 class="section-title">Why Social Media?</h2>
+    <div class="why-cards">
+      <div class="card tilt" data-tilt>
+        <i class="fas fa-user-shield icon personal-icon"></i>
+
+        <h3>Personal Branding</h3>
+        <p>Build a strong and unique identity that stands out in a crowded digital space.</p>
+      </div>
+      <div class="card tilt" data-tilt>
+        <i class="fas fa-bullhorn icon"></i>
+        <h3>Increased Credibility</h3>
+        <p>Enhance trust with consistent, authentic presence across social platforms.</p>
+      </div>
+      <div class="card tilt" data-tilt>
+        <i class="fas fa-briefcase icon"></i>
+        <h3>Business Opportunities</h3>
+        <p>Attract clients, collaborations, and grow your career or business reach.</p>
+      </div>
+    </div>
+  </section>  
 <div class="section-divider">
   <span>•</span>
   <span>•</span>
@@ -222,4 +239,10 @@
     <div id="popupMessage" class="popup-box">
       <p>Thanks! We'll get back to you ASAP.</p>
     </div>
-    
+  
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.3/dist/vanilla-tilt.min.js"></script>

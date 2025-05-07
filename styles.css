@@ -20,7 +20,7 @@ section {
 
 .nav-toggle {
   position: absolute;
-  top: 25px; /* increased from 15px */
+  top: 25px; 
   left: 15px;
   background: none;
   border: none;
@@ -205,7 +205,6 @@ section {
   flex-shrink: 0;
 }
 
-/* Make steps vertical on mobile */
 @media (max-width: 600px) {
   .process {
     flex-direction: column;
@@ -797,5 +796,92 @@ section {
 
   .card-description {
     font-size: 1rem;
+  }
+}
+
+#whySocialMedia {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: none;
+}
+
+.section-title {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.why-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px 20px;
+  max-width: 350px;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    inset 0 0 0.5px rgba(255, 255, 255, 0.2),
+    inset 0 0 10px rgba(255, 255, 255, 0.05),
+    0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    inset 0 0 1px rgba(255, 255, 255, 0.2),
+    inset 0 0 15px rgba(255, 255, 255, 0.05),
+    0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: yellow;
+  margin-bottom: 20px;
+}
+
+.card p {
+  font-size: 1.1rem;
+  color: rgb(255, 255, 255);
+  margin-top: 15px;
+}
+
+.card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffcc00;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+.personal-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.personal-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .why-cards {
+    flex-direction: row;
   }
 }
