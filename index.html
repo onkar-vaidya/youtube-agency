@@ -15,32 +15,32 @@
 </head>
 <body>
   <header class="custom-header">
-    <button id="navToggle" class="nav-toggle" aria-label="Toggle Menu">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </button>
-  
     <div class="brand-logo">
-      <img src="assets/brand-logo_cleaned.png" alt="Brand Logo">
+      <img src="assets/brand-logo_cleaned.png" alt="YouTube Agency Logo" class="logo-img">
     </div>
-  
-    <nav id="mainNav" class="nav-menu">
-      <div class="nav-back-button">
-        <button id="back-btn">← Back</button>
-      </div>
-      <ul>
-        <li><a href="#custom-intro-bar vertical">Introduction</a></li>
-        <li><a href="#who-we-are-section">Who We Are</a></li>
-        <li><a href="#why">Why Social Media?</a></li>
-        <li><a href="#offer-section">What We Offer</a></li>
-        <li><a href="#how-we-work">How We Work</a></li>
-        <li><a href="#why-choose-us-section">Why Choose Us</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      
+      <ul class="nav-links">
+        <li><a href="#introduction" class="nav-link">Introduction</a></li>
+        <li><a href="#who-we-are" class="nav-link">Who We Are</a></li>
+        <li><a href="#why-social-media" class="nav-link">Why Social Media?</a></li>
+        <li><a href="#what-we-offer" class="nav-link">What We Offer</a></li>
+        <li><a href="#how-we-work" class="nav-link">How We Work</a></li>
+        <li><a href="#why-choose-us" class="nav-link">Why Choose Us</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <div class="custom-intro-bar vertical">
+  
+  
+  <section id="introduction" class="custom-intro-bar vertical">
     <div class="bar-text-vertical">
       <span class="bar-item">PERSONAL BRAND</span>
       <img src="assets/arrow-yellow.png" alt="arrow" class="bar-arrow-img" />
@@ -48,7 +48,7 @@
       <img src="assets/arrow-yellow.png" alt="arrow" class="bar-arrow-img" />
       <span class="bar-item">BUSINESS OPPORTUNITIES</span>
     </div>
-  </div>
+  </section>
   
   
   <div class="strategy-line">
@@ -59,7 +59,7 @@
     <span>•</span>
     <span>•</span>
   </div>
-  <section class="who-we-are-section">
+  <section id="who-we-are" class="who-we-are-section">
     <h1 class="who-we-are-heading">WHO WE ARE</h1>
     <p class="who-we-are-description">
       WE ARE <span class="highlight-yellow">YOUTUBE</span> AND <span class="highlight-yellow">SOCIAL MEDIA</span> EXPERTS WHO HELP YOU REACH MORE PEOPLE WITH CONTENT.
@@ -67,7 +67,7 @@
   </section>
   
   
-  <section class="expertise-section">
+  <section id="expertise" class="expertise-section">
     <h2 class="expertise-heading">OUR EXPERTISE</h2>
     <div class="expertise-stats">
       <div class="stat">
@@ -94,12 +94,11 @@
     <span>•</span>
   </div>
 
-  <section id="whySocialMedia" class="section aos-init" data-aos="fade-up">
+  <section id="why-social-media" class="section aos-init" data-aos="fade-up">
     <h2 class="section-title">Why Social Media?</h2>
     <div class="why-cards">
       <div class="card tilt" data-tilt>
         <i class="fas fa-user-shield icon personal-icon"></i>
-
         <h3>Personal Branding</h3>
         <p>Build a strong and unique identity that stands out in a crowded digital space.</p>
       </div>
@@ -120,11 +119,9 @@
   <span>•</span>
   <span>•</span>
 </div>
-        <section class="offer-section">
-      <h2 class="offer-heading">WHAT WE OFFER</h2>
-      <div class="offer-cards">
-    
-        <div class="offer-card">
+  <section id="what-we-offer" class="offer-section">
+    <h2 class="offer-heading">WHAT WE OFFER</h2>
+    <div class="offer-cards">        <div class="offer-card">
           <img src="assets/youtube-icon.png" alt="YouTube Icon" class="offer-icon" />
           <h3 class="offer-title">YOUTUBE GROWTH</h3>
           <ul class="offer-list">
@@ -164,7 +161,7 @@
       <span>•</span>
     </div>
 
-    <section id="how-we-work">
+  <section id="how-we-work">
       <h2>How We Work</h2>
       <div class="work-steps">
         <div class="work-step">
@@ -194,7 +191,7 @@
   <span>•</span>
 </div>
 
-<section class="why-choose-us-section">
+<section id="why-choose-us" class="why-choose-us-section">
   <h2 class="why-choose-us-heading">WHY CHOOSE US?</h2>
   <div class="why-choose-us-cards">
     <div class="why-choose-us-card">
@@ -221,7 +218,7 @@
   <span>•</span>
   <span>•</span>
 </div>
-    <section id="contact">
+  <section id="contact">
       <div class="simple-contact-info">
         <h3 class="sub-heading">CONTACT NOW!</h3>
         <p class="contact-line"><i class="fas fa-phone"></i> 8975022905</p>
