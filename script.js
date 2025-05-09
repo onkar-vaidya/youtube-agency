@@ -1,9 +1,7 @@
-// Navigation Menu Functionality
 document.addEventListener('DOMContentLoaded', function() {
   const navTrigger = document.querySelector('.nav-trigger');
   const navLinks = document.querySelectorAll('.nav-link');
 
-  // Handle navigation links
   navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
@@ -24,12 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Lock body scroll when menu is open
   navTrigger.addEventListener('change', () => {
     document.body.style.overflow = navTrigger.checked ? 'hidden' : '';
   });
 
-  // Handle scroll events for active state
   window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
 
@@ -50,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Add scroll event listener for active state
 window.addEventListener('scroll', () => {
   const sections = document.querySelectorAll('section');
   let current = '';
@@ -84,18 +79,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Handle outside clicks
 function closeMenuOnOutsideClick(e) {
   if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
     toggleMenu(false);
   }
 }
 
-// Add event listeners for both click and touchstart
 document.addEventListener('click', closeMenuOnOutsideClick);
 document.addEventListener('touchstart', closeMenuOnOutsideClick);
-
-// Handle scroll for active state
 window.addEventListener('scroll', () => {
   const sections = document.querySelectorAll('section');
   let current = '';
@@ -127,26 +118,22 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Prevent unintended highlighting
 navLinks.forEach(link => {
   link.addEventListener('mouseover', (e) => {
     e.preventDefault();
   });
 });
 
-// Prevent unintended menu open
 navToggle.addEventListener('mouseover', (e) => {
   e.preventDefault();
 });
 
-// Close menu when tapping outside
 document.addEventListener('click', (e) => {
   if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
     toggleMenu(false);
   }
 });
 
-// Contact Form Handling
 const contactForm = document.getElementById('contactForm');
 const popupMessage = document.getElementById('popupMessage');
 
@@ -162,7 +149,6 @@ if (contactForm && popupMessage) {
   });
 }
 
-// Initialize tilt effect
 try {
   VanillaTilt.init(document.querySelectorAll(".tilt"), {
     max: 15,
