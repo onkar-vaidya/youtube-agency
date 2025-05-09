@@ -39,7 +39,7 @@
     </nav>
   </header>
 
-  <section id="who-we-are" class="who-we-are-section section">
+  <section id="who-we-are" class="who-we-are-section section" data-aos="fade-up">
     <h2 class="who-we-are-heading">Who We Are?</h2>
     <p class="who-we-are-description">
         We are <span class="highlight">YouTube</span> and <span class="highlight">Social Media</span> experts who help you reach more people with content.
@@ -97,7 +97,7 @@
   <span>•</span>
   <span>•</span>
 </div>
-  <section id="what-we-offer" class="offer-section">
+  <section id="what-we-offer" class="offer-section" data-aos="fade-up">
     <h2 class="offer-heading">WHAT WE OFFER!</h2>
     <div class="offer-cards">        <div class="offer-card">
           <img src="assets/youtube-icon.png" alt="YouTube Icon" class="offer-icon" />
@@ -138,7 +138,7 @@
       <span>•</span>
     </div>
 
-  <section id="how-we-work">
+  <section id="how-we-work" data-aos="fade-up">
       <h2>How We Work?</h2>
       <div class="work-steps">
         <div class="work-step">
@@ -167,7 +167,7 @@
   <span>•</span>
   <span>•</span>
 </div>
-<section id="why-choose-us" class="why-choose-us-section">
+<section id="why-choose-us" class="why-choose-us-section" data-aos="fade-up">
   <h2 class="why-choose-us-heading">WHY CHOOSE US?</h2>
   <div class="why-choose-us-cards">
     <div class="why-choose-us-card">
@@ -192,7 +192,7 @@
   <span>•</span>
   <span>•</span>
 </div>
-  <section id="contact">
+  <section id="contact" data-aos="fade-up">
       <div class="simple-contact-info">
         <h3 class="sub-heading">CONTACT NOW!</h3>
         <p class="contact-line"><i class="fas fa-phone"></i> 8975022905</p>
@@ -213,7 +213,13 @@
   
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+      duration: 800,
+      offset: 100,
+      once: false,
+      mirror: true,
+      easing: 'ease-in-out'
+    });
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.3/dist/vanilla-tilt.min.js"></script>
