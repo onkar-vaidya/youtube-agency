@@ -31,31 +31,18 @@ h1, h2, h3 {
 
 
 
-section h2 {
-  font-size: var(--heading-size);
-  color: var(--heading-color);
-  margin-bottom: 3rem;
-  font-weight: 700;
+section h2, .section-heading {
+  font-size: 2.5rem;
+  color: #FFD700;
+  margin-bottom: 2rem;
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
-               0 0 20px var(--heading-glow);
-  position: relative;
-  padding-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
-section h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background: var(--heading-color);
-  border-radius: 2px;
-  box-shadow: 0 0 10px var(--heading-glow);
-}
+
 
 .company-name {
   position: absolute;
@@ -206,11 +193,16 @@ h1, h2, h3, h4, h5, h6 {
   50% { transform: translateX(5px); }
 }
 
-section {
-  padding: 1rem 2rem;
+.section {
+  padding: 0.5rem 1rem;
+  margin: 0;
   text-align: center;
   flex: 1;
   min-height: 80vh;
+}
+
+.section.our-expertise {
+  padding: 1.5rem 1rem;
 }
 
 .site-nav {
@@ -427,16 +419,18 @@ section {
 }
 
 .who-we-are-section {
-  padding-top: 7rem;
-  padding-bottom: 4rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 5rem 1rem 2.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  background: transparent;
+  width: 100%;
+  box-sizing: border-box;
 }
+
+
 
 .who-we-are-section .section-heading {
   font-size: var(--heading-size);
@@ -447,7 +441,7 @@ section {
   letter-spacing: 2px;
   position: relative;
   padding-bottom: 1.5rem;
-  text-align: center;
+  background: transparent;
 }
 
 .who-we-are-section .section-heading::after {
@@ -465,18 +459,21 @@ section {
 .who-we-are-section .sub-heading {
   font-size: calc(var(--heading-size) * 0.7);
   color: var(--heading-color);
-  margin: 3rem 0 2rem;
+  margin: 2rem 0 1.5rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  text-align: center;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  letter-spacing: 1.2px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  background: transparent;
 }
 
 .stat {
   text-align: center;
-  padding: 1rem 0.5rem;
+  padding: 0;
+  background: transparent;
   position: relative;
+  box-shadow: none;
+  border: none;
 }
 
 .stat::after {
@@ -486,7 +483,7 @@ section {
   right: -1rem;
   width: 2px;
   height: 40%;
-  background: rgba(255, 215, 0, 0.1);
+  background: rgba(255, 215, 0, 0.2);
   transform: translateY(-50%);
 }
 
@@ -496,16 +493,16 @@ section {
 
 .stat-title {
   color: var(--heading-color);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.25rem;
 }
 
 .stat-desc {
   color: rgba(255, 255, 255, 0.35);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.8px;
   font-weight: 300;
@@ -529,6 +526,7 @@ section {
   font-weight: 700;
   margin: 0.3rem 0;
   line-height: 1;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 768px) {
@@ -553,60 +551,27 @@ section {
 
 .expertise-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
   width: 100%;
-  max-width: 1200px;
-  padding: 2rem;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
+  padding: 0;
+  background: transparent;
 }
 
 @media (max-width: 768px) {
   .expertise-stats {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    padding: 1.5rem;
-    background: rgba(0, 0, 0, 0.2);
+    padding: 0;
   }
 
   .stat::after {
-    display: none;
-  }
-
-  .stat {
-    position: relative;
-  }
-
-  .stat::before {
-    content: '';
-    position: absolute;
-    bottom: -1rem;
-    left: 50%;
-    width: 40%;
-    height: 1px;
-    background: rgba(255, 215, 0, 0.1);
-    transform: translateX(-50%);
-  }
-
-  .stat:last-child::before {
-    display: none;
-  }
-
-  .stat-value {
-    font-size: 2.5rem;
-  }
-
-  .stat-title {
-    font-size: 1.1rem;
-    letter-spacing: 1.2px;
+    display: block;
   }
 
   .who-we-are-section {
-    background: linear-gradient(135deg, rgba(28, 0, 0, 0.95), rgba(74, 0, 0, 0.95));
-    padding: 3rem 1.5rem;
+    padding: 5rem 1rem 2.5rem;
   }
 
   .who-we-are-section .section-heading {
@@ -616,33 +581,87 @@ section {
   }
 
   .who-we-are-section .sub-heading {
-    font-size: calc(var(--heading-size) * 0.7);
+    font-size: calc(var(--heading-size) * 0.8);
     margin: 2.5rem 0 2rem;
     letter-spacing: 1.5px;
+  }
+
+  .stat-title {
+    font-size: 1.2rem;
+  }
+
+  .stat-value {
+    font-size: 2.5rem;
+  }
+
+  .stat-desc {
+    font-size: 0.85rem;
   }
 }
 
 @media (max-width: 480px) {
   .expertise-stats {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1rem;
-    background: transparent;
+    gap: 3.5rem;
+    padding: 0;
   }
 
-  .stat::before {
-    width: 30%;
-    height: 1px;
-    opacity: 0.5;
+  .stat {
+    position: relative;
+    padding-bottom: 2rem;
   }
 
-  .stat-value {
-    font-size: 2.2rem;
+  .stat::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: var(--heading-color);
+    opacity: 0.3;
+  }
+
+  .stat:last-child::after {
+    display: none;
   }
 
   .stat-title {
-    font-size: 1rem;
-    letter-spacing: 1px;
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+    color: var(--heading-color);
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-value {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 0.8rem 0;
+  }
+
+  .stat-value.yellow {
+    background: linear-gradient(135deg, var(--heading-color), #FFF5D4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+  }
+
+  .stat-value.white {
+    background: linear-gradient(135deg, #FFFFFF, #D4D4D4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+  }
+
+  .stat-desc {
+    font-size: 0.9rem;
+    letter-spacing: 1.2px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 0.5rem;
   }
 }
 
@@ -1489,6 +1508,60 @@ section {
   background: none;
 }
 
+/* Our Expertise - Mobile View */
+.our-expertise-section {
+  padding: 3rem 1rem 2rem;
+  background: transparent;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.expertise-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+}
+
+.expertise-subheading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #FFD700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.expertise-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFD700; /* Bright Yellow */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.25rem;
+}
+
+.expertise-value {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+}
+
+.expertise-desc {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
 .section-title {
   color: #fff;
   font-size: 2rem;
@@ -1517,9 +1590,9 @@ section {
     inset 0 0 0.5px rgba(255, 255, 255, 0.2),
     inset 0 0 10px rgba(255, 255, 255, 0.05),
     0 8px 24px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   color: rgb(255, 255, 255);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
