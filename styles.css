@@ -4,12 +4,20 @@
   padding: 0;
 }
 
-html, body {
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #4a0000;
+}
+
+body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
   background-color: #4a0000;
   overscroll-behavior: none;
+  position: relative;
 }
 
 body {
@@ -26,16 +34,22 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
-  background: url('assets/red.jpeg');
+  background: url('assets/red.jpeg') #4a0000;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   z-index: -1;
   transform: translateZ(0);
+  -webkit-transform: translateZ(0);
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   perspective: 1000;
+  -webkit-perspective: 1000;
 }
 
 h1, h2, h3 {
@@ -112,53 +126,21 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
-  box-shadow: 0 4px 20px var(--shadow-color),
-              inset 0 0 30px rgba(255, 215, 0, 0.1);
+  box-shadow: 0 4px 20px var(--shadow-color);
   border: 2px solid rgba(255, 215, 0, 0.3);
   transition: transform 0.3s ease;
-  transform: rotate(var(--rotate-angle));
-  will-change: transform;
   position: relative;
 }
 
-.flow-item:nth-child(3) .circle {
-  transform: rotate(calc(var(--rotate-angle) * -1));
-}
-
-.flow-item:nth-child(5) .circle {
-  transform: rotate(var(--rotate-angle));
-}
-
-.circle::before {
-  content: '';
-  position: absolute;
-  inset: -50%;
-  background: linear-gradient(45deg, rgba(255, 215, 0, 0.1), transparent);
-  animation: shine 3s ease-in-out infinite;
-}
-
 .circle:hover {
-  transform: rotate(45deg) translateY(-5px);
-  box-shadow: 
-    0 8px 25px var(--shadow-color),
-    inset 0 0 40px rgba(255, 215, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px var(--shadow-color);
 }
 
 .circle i,
 .circle span {
   color: var(--accent-color);
-  transform: rotate(calc(var(--rotate-angle) * -1));
   text-shadow: 2px 2px 4px var(--shadow-color);
-}
-
-.flow-item:nth-child(3) .circle i,
-.flow-item:nth-child(3) .circle span {
-  transform: rotate(var(--rotate-angle));
-}
-
-.flow-item:nth-child(5) .circle i,
-.flow-item:nth-child(5) .circle span {
-  transform: rotate(calc(var(--rotate-angle) * -1));
 }
 
 .circle i {
@@ -176,17 +158,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-primary);
 }
 
-.flow-arrow {
-  color: var(--accent-color);
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-  text-shadow: 2px 2px 4px var(--shadow-color);
-  animation: bounceX 2s ease-in-out infinite;
-  opacity: 0.8;
-  margin: 0 -1rem;
-  position: relative;
-  z-index: 1;
-}
-
 .strategy-line {
   font-size: clamp(1rem, 3vw, 1.5rem);
   color: #FFD700;
@@ -195,16 +166,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-primary);
   font-weight: 600;
   letter-spacing: 0.3px;
-}
-
-@keyframes shine {
-  from, to { opacity: 0.5; }
-  50% { opacity: 1; }
-}
-
-@keyframes bounceX {
-  from, to { transform: translateX(0); }
-  50% { transform: translateX(5px); }
 }
 
 .section {
