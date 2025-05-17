@@ -39,30 +39,125 @@
     </nav>
   </header>
 
-  <section id="who-we-are" class="who-we-are-section section" data-aos="fade-up">
-    <h2 class="who-we-are-heading">Who We Are?</h2>
-    <p class="who-we-are-description">
-        We are <span class="highlight">YouTube</span> and <span class="highlight">Social Media</span> experts who help you reach more people with content.
-    </p>
+  <!-- Hero Section with Modern Animation (Mobile Optimized) -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+      <!-- Simplified visual elements for mobile (order will be reversed in desktop via CSS) -->
+      <div class="hero-visual" data-aos="fade-up" data-aos-duration="800">
+        <div class="floating-elements">
+          <!-- Reduced to just two key elements for mobile to prevent overlapping -->
+          <div class="floating-element subscribers mobile-only-left">
+            <i class="fas fa-users"></i>
+            <span>Subscribers</span>
+          </div>
+          <div class="floating-element views mobile-only-right">
+            <i class="fas fa-eye"></i>
+            <span>Views</span>
+          </div>
+          <!-- These elements will only show on desktop -->
+          <div class="floating-element revenue desktop-only">
+            <i class="fas fa-dollar-sign"></i>
+            <span>Revenue</span>
+          </div>
+          <div class="floating-element engagement desktop-only">
+            <i class="fas fa-thumbs-up"></i>
+            <span>Engagement</span>
+          </div>
+        </div>
+        <div class="play-button-container">
+          <div class="play-button-circle">
+            <i class="fas fa-play"></i>
+          </div>
+          <div class="pulse-ring"></div>
+        </div>
+      </div>
+      
+      <!-- Text content second for mobile (order will be reversed in desktop via CSS) -->
+      <div class="hero-text" data-aos="fade-up" data-aos-duration="800">
+        <h1 class="hero-title">Elevate Your <span class="highlight-text">YouTube</span> Presence</h1>
+        <p class="hero-subtitle">Transform your content into a powerful brand that captivates and converts</p>
+        <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
+          <div class="hero-stat">
+            <span class="stat-number">40+</span>
+            <span class="stat-label">Channels</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-number">100M+</span>
+            <span class="stat-label">Views</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-number">10+</span>
+            <span class="stat-label">Niches</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-number">0₹</span>
+            <span class="stat-label">Ad Spend</span>
+          </div>
+        </div>
+        <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
+          <a href="#contact" class="cta-button">Get Started</a>
+          <a href="#what-we-offer" class="cta-button outline">Our Services</a>
+        </div>
+      </div>
+    </div>
     
-    <div class="our-expertise-section section our-expertise">
-      <h3 class="expertise-subheading">Our Expertise</h3>
-      <div class="expertise-item">
-        <div class="expertise-title">YouTube Management</div>
-        <div class="expertise-value">40+</div>
-        <div class="expertise-desc">Monetized Channels</div>
-      </div>
+    <!-- Scroll indicator removed -->
+  </section>
 
-      <div class="expertise-item">
-        <div class="expertise-title">Scale</div>
-        <div class="expertise-value">100M+</div>
-        <div class="expertise-desc">Monthly Views</div>
+  <section id="who-we-are" class="who-we-are-section section" data-aos="fade-up">
+    <h2 class="who-we-are-heading">Who We <span class="highlight-text">Are</span></h2>
+    
+    <div class="who-we-are-container">
+      <!-- Visual elements first for mobile (order will be reversed in desktop via CSS) -->
+      <div class="who-we-are-visual" data-aos="fade-up" data-aos-duration="800">
+        <div class="profile-image-container">
+          <div class="profile-image-overlay"></div>
+          <div class="profile-image" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.3">
+            <img src="assets/what-we-offer.png" alt="Our Team" class="team-image">
+          </div>
+          <div class="floating-badge subscribers">
+            <i class="fas fa-users"></i>
+            <span>Experts</span>
+          </div>
+          <div class="floating-badge views">
+            <i class="fas fa-chart-line"></i>
+            <span>Results</span>
+          </div>
+          <div class="pulse-ring who-we-are-pulse"></div>
+        </div>
       </div>
-
-      <div class="expertise-item">
-        <div class="expertise-title">Industries</div>
-        <div class="expertise-value">10+</div>
-        <div class="expertise-desc">Different Niches</div>
+      
+      <!-- Text content second for mobile (order will be reversed in desktop via CSS) -->
+      <div class="who-we-are-text" data-aos="fade-up" data-aos-duration="800">
+        <h3 class="who-we-are-subtitle">Transforming <span class="highlight-text">YouTube</span> Presence</h3>
+        <p class="who-we-are-description">
+          We are a team of <span class="highlight-text">YouTube</span> and <span class="highlight-text">Social Media</span> experts dedicated to elevating your digital presence. With our data-driven approach and proven strategies, we help creators and businesses unlock their full potential in the digital landscape.
+        </p>
+        
+        <div class="expertise-stats" data-aos="fade-up" data-aos-delay="200">
+          <div class="expertise-stat">
+            <div class="stat-icon"><i class="fas fa-play-circle"></i></div>
+            <div class="stat-number">40+</div>
+            <div class="stat-label">Monetized Channels</div>
+          </div>
+          
+          <div class="expertise-stat">
+            <div class="stat-icon"><i class="fas fa-eye"></i></div>
+            <div class="stat-number">100M+</div>
+            <div class="stat-label">Monthly Views</div>
+          </div>
+          
+          <div class="expertise-stat">
+            <div class="stat-icon"><i class="fas fa-layer-group"></i></div>
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Different Niches</div>
+          </div>
+        </div>
+        
+        <div class="who-we-are-cta" data-aos="fade-up" data-aos-delay="300">
+          <a href="#what-we-offer" class="cta-button">Our Services</a>
+          <a href="#contact" class="cta-button outline">Contact Us</a>
+        </div>
       </div>
     </div>
   </section>
@@ -214,11 +309,12 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({
-      duration: 800,
-      offset: 100,
-      once: false,
+      duration: window.innerWidth < 768 ? 600 : 800,
+      offset: window.innerWidth < 768 ? 50 : 100,
+      once: window.innerWidth < 768 ? true : false,
       mirror: true,
-      easing: 'ease-in-out'
+      easing: 'ease-out',
+      disable: 'phone' // Disable on mobile and use our custom animations
     });
   </script>
 
