@@ -195,17 +195,62 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }, isMobile ? 200 : 100)); // More aggressive throttle for mobile
 
+  // Contact form handling with validation and improved feedback
   const contactForm = document.getElementById('contactForm');
   const popupMessage = document.getElementById('popupMessage');
+  const closePopupBtn = document.getElementById('closePopup');
 
   if (contactForm && popupMessage) {
+    // Form submission handler
     contactForm.addEventListener('submit', (event) => {
       event.preventDefault();
-      popupMessage.style.display = 'block';
+      
+      // Basic form validation
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      
+      if (name === '' || email === '' || message === '') {
+        alert('Please fill in all required fields.');
+        return;
+      }
+      
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+      
+      // Show success message
+      popupMessage.style.display = 'flex';
+      
+      // Reset form
       contactForm.reset();
+      
+      // Automatically close the popup after 5 seconds
       setTimeout(() => {
-        popupMessage.style.display = 'none';
-      }, 3000);
+        closePopup();
+      }, 5000);
+    });
+    
+    // Function to close popup and restore scrolling
+    function closePopup() {
+      popupMessage.style.display = 'none';
+    }
+    
+    // Close popup button handler
+    if (closePopupBtn) {
+      closePopupBtn.addEventListener('click', () => {
+        closePopup();
+      });
+    }
+    
+    // Close popup when clicking outside the content
+    popupMessage.addEventListener('click', (event) => {
+      if (event.target === popupMessage) {
+        closePopup();
+      }
     });
   }
 });
