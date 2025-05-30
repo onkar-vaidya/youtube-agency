@@ -1,0 +1,48 @@
+/* Button fix for overlapping CTA buttons */
+.hero-cta {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  padding: 12px 24px;
+  background-color: #FFD700;
+  color: #4a0000;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  min-width: 140px;
+  border: 2px solid #FFD700;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.cta-button.outline {
+  background-color: transparent;
+  color: #FFD700;
+  border: 2px solid #FFD700;
+}
+
+/* Mobile responsive fixes */
+@media (max-width: 480px) {
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .cta-button {
+    width: 100%;
+    max-width: 200px;
+  }
+}

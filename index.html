@@ -5,16 +5,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <base href="/">
   <title>YouTube Agency</title>
-  <link rel="stylesheet" href="styles.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Performance optimizations: Preconnect to external domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  
+  <!-- Preload critical assets -->
+  <link rel="preload" href="assets/brand-logo_cleaned.png" as="image">
+  <link rel="preload" href="assets/red.jpeg" as="image">
+  
+  <!-- Inline critical CSS for faster rendering -->
+  <style>
+    /* Critical CSS for YouTube Agency Website */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background-color: #4a0000;
+      overscroll-behavior: none;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #4a0000;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 1;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #4a0000 url('assets/red.jpeg') center/cover no-repeat fixed;
+      z-index: -1;
+      will-change: transform;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .custom-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: relative;
+      z-index: 1000;
+    }
+
+    .brand-logo img {
+      height: 50px;
+      width: auto;
+    }
+  </style>
+  
+  <!-- Combined font loading for better performance -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
+  
+  <!-- Non-critical CSS with non-blocking loading -->
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="button-fix.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" media="print" onload="this.media='all'">
+  <!-- Fallback for browsers that don't support onload -->
+  <noscript>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="button-fix.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  </noscript>
+  
+  <!-- Deferred JavaScript loading -->
   <script defer src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <!-- Using Font Awesome CDN instead of kit to avoid loading issues -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.3/dist/vanilla-tilt.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" onload="initAOS()"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.3/dist/vanilla-tilt.min.js"></script>
+  <script defer src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Initialize AOS after it loads -->
+  <script>
+    function initAOS() {
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false,
+        disable: window.innerWidth < 768 // Disable animations on mobile for better performance
+      });
+    }
+  </script>
 </head>
 <body>
   <header class="custom-header">
@@ -24,7 +117,7 @@
 
     <nav class="site-nav">
       <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-      <label for="nav-trigger">
+      <label for="nav-trigger" aria-label="Toggle navigation menu">
         <span></span>
         <span></span>
         <span></span>
@@ -36,6 +129,7 @@
         <li><a href="#why-social-media" class="nav-link">Why Social Media?</a></li>
         <li><a href="#how-we-work" class="nav-link">How We Work</a></li>
         <li><a href="#why-choose-us" class="nav-link">Why Choose Us</a></li>
+        <li><a href="/blog" class="nav-link">Blog</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
@@ -103,14 +197,10 @@
       </div>
     </div>
   </section>
-  <div class="section-divider">
-    <span>•</span>
-     <span>•</span>
-     <span>•</span>
-   </div>
+  <div class="section-separator">...</div>
 
   <section id="who-we-are" class="who-we-are-section section" data-aos="fade-up">
-    <h2 class="who-we-are-heading">Who We <span class="highlight-text">Are</span></h2>
+    <h2 class="who-we-are-heading">Who We <span class="highlight-text">Are?</span></h2>
     
     <div class="who-we-are-container">
       <!-- Visual elements section removed as requested -->
@@ -135,22 +225,28 @@
         </div>
         
         <div class="expertise-stats" data-aos="fade-up" data-aos-delay="200">
-          <div class="expertise-stat">
-            <div class="stat-icon"><i class="fas fa-play-circle"></i></div>
-            <div class="stat-number gold-stat">40+</div>
-            <div class="stat-label">Monetized Channels</div>
+          <div class="stat-bullet">
+            <i class="fas fa-play-circle"></i>
+            <div class="stat-content">
+              <span class="stat-number gold-stat">40+</span>
+              <span class="stat-label">Monetized Channels</span>
+            </div>
           </div>
           
-          <div class="expertise-stat">
-            <div class="stat-icon"><i class="fas fa-eye"></i></div>
-            <div class="stat-number gold-stat">100M+</div>
-            <div class="stat-label">Monthly Views</div>
+          <div class="stat-bullet">
+            <i class="fas fa-eye"></i>
+            <div class="stat-content">
+              <span class="stat-number gold-stat">100M+</span>
+              <span class="stat-label">Monthly Views</span>
+            </div>
           </div>
           
-          <div class="expertise-stat">
-            <div class="stat-icon"><i class="fas fa-layer-group"></i></div>
-            <div class="stat-number gold-stat">10+</div>
-            <div class="stat-label">Different Niches</div>
+          <div class="stat-bullet">
+            <i class="fas fa-layer-group"></i>
+            <div class="stat-content">
+              <span class="stat-number gold-stat">10+</span>
+              <span class="stat-label">Different Niches</span>
+            </div>
           </div>
         </div>
         
@@ -158,12 +254,8 @@
       </div>
     </div>
   </section>
+  <div class="section-separator">...</div>
   
-   <div class="section-divider">
-   <span>•</span>
-    <span>•</span>
-    <span>•</span>
-  </div>
   <section id="why-social-media" class="why-social-section section" data-aos="fade-up">
     <h2 class="section-heading">WHY SOCIAL <span class="highlight-text">MEDIA</span>?</h2>
     
@@ -205,11 +297,7 @@
       </div>
     </div>
   </section>
-<div class="section-divider">
-  <span>•</span>
-  <span>•</span>
-  <span>•</span>
-</div>
+  <div class="section-separator">...</div>
 
   <section id="how-we-work" class="section" data-aos="fade-up">
     <h2 class="section-heading">How We <span class="highlight-text">Work</span></h2>
@@ -246,11 +334,7 @@
       </div>
     </div>
   </section>
-<div class="section-divider">
-  <span>•</span>
-  <span>•</span>
-  <span>•</span>
-</div>
+  <div class="section-separator">...</div>
 <section id="why-choose-us" class="why-choose-us-section" data-aos="fade-up">
   <h2 class="why-choose-us-heading">WHY CHOOSE US?</h2>
   <div class="why-choose-us-cards">
@@ -271,41 +355,38 @@
     </div>
   </div>
 </section>
-<div class="section-divider">
-  <span>•</span>
-  <span>•</span>
-  <span>•</span>
-</div>
-  <section id="contact" class="section" data-aos="fade-up">
+  <div class="section-separator">...</div>
+  <section id="contact" class="section" data-aos="fade-up" style="padding: 0; width: 100%;">
     <h2 class="section-heading">Contact <span class="highlight-text">Us</span></h2>
     
-    <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
-      <div class="contact-details">
-        <a href="tel:+918975022905" class="contact-item" aria-label="Call our first phone number">
-          <div class="contact-icon"><i class="fas fa-phone"></i></div>
-          <div class="contact-text">
-            <p>Phone: +91 8975 022 905</p>
-          </div>
-        </a>
-        
-        <a href="tel:+918329542530" class="contact-item" aria-label="Call our second phone number">
-          <div class="contact-icon"><i class="fas fa-phone"></i></div>
-          <div class="contact-text">
-            <p>Phone: +91 8329 542 530</p>
-          </div>
-        </a>
-        
-        <a href="mailto:INFO@socialbrains.in" class="contact-item" aria-label="Send us an email">
-          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-          <div class="contact-text">
-            <p>INFO@socialbrains.in</p>
-          </div>
-        </a>
+    <div class="contact-wrapper" style="display: flex; flex-direction: column; width: 100%; max-width: 1200px; margin: 0 auto;">
+      <div class="contact-info" data-aos="fade-up" data-aos-delay="100" style="max-width: 400px; margin: 0 auto 20px;">
+        <div class="contact-details" style="max-width: 400px;">
+          <a href="tel:+918975022905" class="contact-item" aria-label="Call our first phone number">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-text">
+              <p>Phone: +91 8975 022 905</p>
+            </div>
+          </a>
+          
+          <a href="tel:+918329542530" class="contact-item" aria-label="Call our second phone number">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-text">
+              <p>Phone: +91 8329 542 530</p>
+            </div>
+          </a>
+          
+          <a href="mailto:INFO@socialbrains.in" class="contact-item" aria-label="Send us an email">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-text">
+              <p>info@socialbrains.in</p>
+            </div>
+          </a>
+        </div>
       </div>
-    </div>
       
-    <div class="contact-form-container" data-aos="fade-up" data-aos-delay="200">
-        <form id="contactForm" class="contact-form">
+      <div class="contact-form-container" data-aos="fade-up" data-aos-delay="200" style="width: 100% !important; max-width: 100% !important; padding: 30px !important; margin: 0 !important;">
+        <form id="contactForm" class="contact-form" style="gap: 25px !important; width: 100% !important;">
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Your Name" required />
@@ -321,12 +402,12 @@
             <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" />
           </div>
           
-          <div class="form-group">
+          <div class="form-group" style="width: 100% !important;">
             <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="How can we help you?" rows="5" required></textarea>
+            <textarea id="message" name="message" placeholder="How can we help you?" rows="8" required style="min-height: 150px;"></textarea>
           </div>
           
-          <button type="submit" class="submit-button">
+          <button type="submit" class="submit-button" style="width: 100% !important; padding: 18px !important; margin-top: 20px !important; font-size: 1.2rem !important;">
             <span>Send Message</span>
             <i class="fas fa-paper-plane"></i>
           </button>

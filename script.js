@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Navigation functionality - removed duplicate code
+  
   // Hero section animations and interactivity (mobile optimized)
   const playButton = document.querySelector('.play-button-circle');
   const floatingElements = document.querySelectorAll('.floating-element');
@@ -78,43 +80,52 @@ document.addEventListener('DOMContentLoaded', function() {
   let isNavigating = false;
   let activeLink = null;
   
+  // Close menu when a link is clicked
   navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetId = link.getAttribute('href');
-      const targetSection = document.querySelector(targetId);
-      
-      if (targetSection) {
-        // Clear all active classes first
-        navLinks.forEach(l => l.classList.remove('active'));
-        
-        // Set this link as active
-        link.classList.add('active');
-        activeLink = link;
-        
-        // Set navigating flag to prevent scroll handler from changing active class
-        isNavigating = true;
-        
-        // Close mobile menu if open
+      // Close the mobile menu when a link is clicked
+      if (navTrigger) {
         navTrigger.checked = false;
-        document.body.style.overflow = '';
+      }
+      
+      // Only prevent default for internal links
+      if (link.getAttribute('href').startsWith('#')) {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
         
-        // Calculate scroll position with different offset for mobile
-        const scrollOffset = isMobile ? 40 : 60;
+        if (targetSection) {
+          // Clear all active classes first
+          navLinks.forEach(l => l.classList.remove('active'));
         
-        // Smooth scroll to the section
-        window.scrollTo({
-          top: targetSection.offsetTop - scrollOffset,
-          behavior: 'smooth'
-        });
+          // Set this link as active
+          link.classList.add('active');
+          activeLink = link;
+          
+          // Set navigating flag to prevent scroll handler from changing active class
+          isNavigating = true;
+          
+          // Close mobile menu if open
+          navTrigger.checked = false;
+          document.body.style.overflow = '';
         
-        // For mobile, use a longer timeout to ensure animation completes
-        const animationDuration = isMobile ? 1500 : 1000;
-        
-        // Reset the navigating flag after animation completes
-        setTimeout(() => {
-          isNavigating = false;
-        }, animationDuration);
+          // Calculate scroll position with different offset for mobile
+          const scrollOffset = isMobile ? 40 : 60;
+          
+          // Smooth scroll to the section
+          window.scrollTo({
+            top: targetSection.offsetTop - scrollOffset,
+            behavior: 'smooth'
+          });
+          
+          // For mobile, use a longer timeout to ensure animation completes
+          const animationDuration = isMobile ? 1500 : 1000;
+          
+          // Reset the navigating flag after animation completes
+          setTimeout(() => {
+            isNavigating = false;
+          }, animationDuration);
+        }
       }
     });
   });
