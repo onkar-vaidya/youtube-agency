@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <base href="/">
   <title>YouTube Algorithm in 2025: What's Changed and How to Adapt | Social Brains</title>
   <meta name="description" content="Learn how YouTube's latest algorithm changes affect your channel growth and what strategies work best in 2025. Expert insights from Social Brains YouTube Agency.">
   <meta name="keywords" content="YouTube algorithm, YouTube SEO, YouTube growth, YouTube 2025, video ranking, YouTube strategy">
@@ -15,8 +14,8 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   
   <!-- Preload critical assets -->
-  <link rel="preload" href="assets/brand-logo_cleaned.png" as="image">
-  <link rel="preload" href="assets/red.jpeg" as="image">
+  <link rel="preload" href="../assets/brand-logo_cleaned.png" as="image">
+  <link rel="preload" href="../assets/red.jpeg" as="image">
   
   <!-- Inline critical CSS for faster rendering -->
   <style>
@@ -53,7 +52,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: #4a0000 url('assets/red.jpeg') center/cover no-repeat fixed;
+      background: #4a0000 url('../assets/red.jpeg') center/cover no-repeat fixed;
       z-index: -1;
       will-change: transform;
       -webkit-backface-visibility: hidden;
@@ -95,9 +94,10 @@
   <!-- Combined font loading for better performance -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
   
-  <!-- Stylesheets with media queries for non-critical CSS -->
-  <link rel="stylesheet" href="styles.css"/>
-  <link rel="stylesheet" href="blog/blog-styles.css">
+  <!-- CSS files with direct loading -->
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="blog-styles.css">
+  <link rel="stylesheet" href="../button-fix.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" media="print" onload="this.media='all'">
   
@@ -122,8 +122,8 @@
 <body>
   <header class="custom-header">
     <div class="brand-logo">
-      <a href="/">
-        <img src="assets/brand-logo_cleaned.png" alt="YouTube Agency Logo" class="logo-img">
+      <a href="../index.html">
+        <img src="../assets/brand-logo_cleaned.png" alt="YouTube Agency Logo" class="logo-img">
       </a>
     </div>
 
@@ -132,17 +132,16 @@
       <label for="nav-trigger" aria-label="Toggle navigation menu">
         <span></span>
         <span></span>
-        <span></span>
       </label>
       
       <ul class="nav-links">
-        <li><a href="/" class="nav-link">Home</a></li>
-        <li><a href="/#who-we-are" class="nav-link">Who We Are</a></li>
-        <li><a href="/#why-social-media" class="nav-link">Why Social Media?</a></li>
-        <li><a href="/#how-we-work" class="nav-link">How We Work</a></li>
-        <li><a href="/#why-choose-us" class="nav-link">Why Choose Us</a></li>
-        <li><a href="/blog" class="nav-link active">Blog</a></li>
-        <li><a href="/#contact" class="nav-link">Contact</a></li>
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../index.html#who-we-are" class="nav-link">Who We Are</a></li>
+        <li><a href="../index.html#why-social-media" class="nav-link">Why Social Media?</a></li>
+        <li><a href="../index.html#how-we-work" class="nav-link">How We Work</a></li>
+        <li><a href="../index.html#why-choose-us" class="nav-link">Why Choose Us</a></li>
+        <li><a href="index.html" class="nav-link">Blog</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -307,11 +306,10 @@
     </div>
 
     <div class="blog-post-tags">
-      <a href="/blog/tag/youtube-algorithm.html">YouTube Algorithm</a>
-      <a href="/blog/tag/content-strategy.html">Content Strategy</a>
-      <a href="/blog/tag/channel-growth.html">Channel Growth</a>
-      <a href="/blog/tag/youtube-seo.html">YouTube SEO</a>
-      <a href="/blog/tag/video-optimization.html">Video Optimization</a>
+      <a href="index.html">YouTube Algorithm</a>
+      <a href="content-strategy.html">Content Strategy</a>
+      <a href="index.html">YouTube Growth</a>
+      <a href="seo-for-youtube.html">Video Ranking</a>
     </div>
 
     <div class="blog-author">
@@ -324,49 +322,23 @@
       </div>
     </div>
 
-    <div class="blog-related-posts">
-      <h2>Related Articles</h2>
+    <div class="related-posts">
+      <h3>Related Articles</h3>
       <div class="related-posts-grid">
-        <div class="blog-card">
-          <div class="blog-image">
-            <a href="/blog/content-strategy.html">
-              <img src="blog/images/content-strategy.jpg" alt="Content Strategy for YouTube">
-            </a>
-          </div>
-          <div class="blog-content">
-            <div class="blog-date">May 15, 2025</div>
-            <h2><a href="/blog/content-strategy.html">Developing a Winning Content Strategy for YouTube in 2025</a></h2>
-            <p>Create a content plan that attracts viewers, builds your audience, and keeps them coming back for more.</p>
-            <a href="/blog/content-strategy.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-          </div>
+        <div class="related-post">
+          <a href="seo-for-youtube.html">
+            <h4>Advanced SEO Techniques for YouTube: Ranking Higher in Search Results</h4>
+          </a>
         </div>
-
-        <div class="blog-card">
-          <div class="blog-image">
-            <a href="/blog/seo-for-youtube.html">
-              <img src="blog/images/youtube-seo.jpg" alt="YouTube SEO Techniques">
-            </a>
-          </div>
-          <div class="blog-content">
-            <div class="blog-date">May 5, 2025</div>
-            <h2><a href="/blog/seo-for-youtube.html">Advanced SEO Techniques for YouTube: Ranking Higher in Search Results</a></h2>
-            <p>Optimize your videos to appear in both YouTube and Google search results with these proven SEO tactics.</p>
-            <a href="/blog/seo-for-youtube.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-          </div>
+        <div class="related-post">
+          <a href="content-strategy.html">
+            <h4>Developing a Winning Content Strategy for YouTube in 2025</h4>
+          </a>
         </div>
-
-        <div class="blog-card">
-          <div class="blog-image">
-            <a href="/blog/audience-retention.html">
-              <img src="blog/images/audience-retention.jpg" alt="Audience Retention Strategies">
-            </a>
-          </div>
-          <div class="blog-content">
-            <div class="blog-date">April 30, 2025</div>
-            <h2><a href="/blog/audience-retention.html">Mastering Audience Retention: Keep Viewers Watching Longer</a></h2>
-            <p>Learn the psychological principles and editing techniques that keep viewers engaged throughout your videos.</p>
-            <a href="/blog/audience-retention.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-          </div>
+        <div class="related-post">
+          <a href="audience-retention.html">
+            <h4>Mastering Audience Retention: Keep Viewers Watching Longer</h4>
+          </a>
         </div>
       </div>
     </div>
@@ -384,33 +356,30 @@
   </section>
 
   <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="assets/brand-logo_cleaned.png" alt="YouTube Agency Logo">
-      </div>
-      <div class="footer-links">
+    <div class="footer-container">
+      <div class="footer-columns">
         <div class="footer-column">
           <h3>Company</h3>
           <ul>
-            <li><a href="/#who-we-are">About Us</a></li>
-            <li><a href="/#why-choose-us">Why Choose Us</a></li>
-            <li><a href="/#contact">Contact</a></li>
+            <li><a href="../index.html#who-we-are">About Us</a></li>
+            <li><a href="../index.html#why-choose-us">Why Choose Us</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>Services</h3>
           <ul>
-            <li><a href="/#how-we-work">Channel Growth</a></li>
-            <li><a href="/#how-we-work">Content Strategy</a></li>
-            <li><a href="/#how-we-work">Monetization</a></li>
+            <li><a href="../index.html#how-we-work">Channel Growth</a></li>
+            <li><a href="../index.html#how-we-work">Content Strategy</a></li>
+            <li><a href="../index.html#how-we-work">Monetization</a></li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>Resources</h3>
           <ul>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/blog/case-studies.html">Case Studies</a></li>
-            <li><a href="/blog/youtube-tools.html">YouTube Tools</a></li>
+            <li><a href="index.html">Blog</a></li>
+            <li><a href="youtube-algorithm-2025.html">Algorithm</a></li>
+            <li><a href="youtube-shorts.html">YouTube Shorts</a></li>
           </ul>
         </div>
       </div>

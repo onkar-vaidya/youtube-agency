@@ -6,83 +6,22 @@
   <base href="/">
   <title>YouTube Agency</title>
   
-  <!-- Performance optimizations: Preconnect to external domains -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   
-  <!-- Preload critical assets -->
   <link rel="preload" href="assets/brand-logo_cleaned.png" as="image">
   <link rel="preload" href="assets/red.jpeg" as="image">
   
-  <!-- Inline critical CSS for faster rendering -->
-  <style>
-    /* Critical CSS for YouTube Agency Website */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      background-color: #4a0000;
-      overscroll-behavior: none;
-    }
-
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: #4a0000;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      z-index: 1;
-      overflow-x: hidden;
-    }
-
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #4a0000 url('assets/red.jpeg') center/cover no-repeat fixed;
-      z-index: -1;
-      will-change: transform;
-      -webkit-backface-visibility: hidden;
-      -moz-backface-visibility: hidden;
-      backface-visibility: hidden;
-    }
-
-    .custom-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      position: relative;
-      z-index: 1000;
-    }
-
-    .brand-logo img {
-      height: 50px;
-      width: auto;
-    }
-  </style>
   
-  <!-- Combined font loading for better performance -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
   
-  <!-- Non-critical CSS with non-blocking loading -->
-  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="button-fix.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="button-fix.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" media="print" onload="this.media='all'">
-  <!-- Fallback for browsers that don't support onload -->
   <noscript>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="button-fix.css">
@@ -90,13 +29,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
   </noscript>
   
-  <!-- Deferred JavaScript loading -->
   <script defer src="script.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" onload="initAOS()"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.3/dist/vanilla-tilt.min.js"></script>
   <script defer src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Initialize AOS after it loads -->
   <script>
     function initAOS() {
       AOS.init({
@@ -104,7 +41,7 @@
         easing: 'ease-in-out',
         once: true,
         mirror: false,
-        disable: window.innerWidth < 768 // Disable animations on mobile for better performance
+        disable: window.innerWidth < 768
       });
     }
   </script>
@@ -135,13 +72,10 @@
     </nav>
   </header>
 
-  <!-- Hero Section with Modern Animation (Mobile Optimized) -->
   <section id="hero" class="hero-section">
     <div class="hero-content">
-      <!-- Simplified visual elements for mobile (order will be reversed in desktop via CSS) -->
       <div class="hero-visual" data-aos="fade-up" data-aos-duration="800">
         <div class="floating-elements">
-          <!-- Reduced to just two key elements for mobile to prevent overlapping -->
           <div class="floating-element subscribers mobile-only-left">
             <i class="fas fa-users"></i>
             <span>Subscribers</span>
@@ -150,7 +84,6 @@
             <i class="fas fa-eye"></i>
             <span>Views</span>
           </div>
-          <!-- These elements will only show on desktop -->
           <div class="floating-element revenue desktop-only">
             <i class="fas fa-dollar-sign"></i>
             <span>Revenue</span>
@@ -168,7 +101,6 @@
         </div>
       </div>
       
-      <!-- Text content second for mobile (order will be reversed in desktop via CSS) -->
       <div class="hero-text" data-aos="fade-up" data-aos-duration="800">
         <h1 class="hero-title">Elevate Your <span class="highlight-text">YouTube</span> Presence</h1>
         <p class="hero-subtitle">Transform your content into a powerful brand that captivates and converts</p>
@@ -203,9 +135,7 @@
     <h2 class="who-we-are-heading">Who We <span class="highlight-text">Are?</span></h2>
     
     <div class="who-we-are-container">
-      <!-- Visual elements section removed as requested -->
       
-      <!-- Text content second for mobile (order will be reversed in desktop via CSS) -->
       <div class="who-we-are-text" data-aos="fade-up" data-aos-duration="800">
         <h3 class="who-we-are-subtitle">Your <span class="highlight-text">YouTube</span> Growth Partners</h3>
         <p class="who-we-are-description">
@@ -250,7 +180,6 @@
           </div>
         </div>
         
-        <!-- CTA buttons removed as requested -->
       </div>
     </div>
   </section>

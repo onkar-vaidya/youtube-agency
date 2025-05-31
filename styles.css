@@ -22,6 +22,20 @@ html, body {
   overscroll-behavior: none;
 }
 
+.custom-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 1000;
+}
+
+.brand-logo img {
+  height: 50px;
+  width: auto;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background: #4a0000;
@@ -2405,23 +2419,34 @@ h1, h2, h3, h4, h5, h6 {
   
   .hero-stats {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     margin-bottom: 0;
+    justify-content: flex-start;
   }
   
   .hero-stat {
     background: transparent;
     border: none;
     padding: 0;
+    text-align: center;
+    min-width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .stat-number {
     font-size: clamp(1.8rem, 3vw, 2.5rem);
+    display: block;
+    text-align: center;
   }
   
   .stat-label {
     font-size: 0.9rem;
     margin-top: 0.5rem;
+    display: block;
+    text-align: center;
   }
   
   .hero-cta {

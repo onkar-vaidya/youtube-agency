@@ -1,4 +1,3 @@
-/* Button fix for overlapping CTA buttons */
 .hero-cta {
   display: flex;
   flex-direction: row;
@@ -33,7 +32,6 @@
   border: 2px solid #FFD700;
 }
 
-/* Mobile responsive fixes */
 @media (max-width: 480px) {
   .hero-cta {
     flex-direction: column;
