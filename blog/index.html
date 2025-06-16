@@ -13,8 +13,8 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   
   <!-- Preload critical assets -->
-  <link rel="preload" href="../assets/brand-logo_cleaned.png" as="image">
-  <link rel="preload" href="../assets/red.jpeg" as="image">
+  <link rel="preload" href="/assets/brand-logo_cleaned.png" as="image">
+  <link rel="preload" href="/assets/red.jpeg" as="image">
   
   <!-- Inline critical CSS for faster rendering -->
   <style>
@@ -51,7 +51,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: #4a0000 url('../assets/red.jpeg') center/cover no-repeat fixed;
+      background: #4a0000 url('/assets/red.jpeg') center/cover no-repeat fixed;
       z-index: -1;
       will-change: transform;
       -webkit-backface-visibility: hidden;
@@ -94,22 +94,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
   
   <!-- CSS files with direct loading -->
-  <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="blog-styles.css">
-  <link rel="stylesheet" href="../button-fix.css">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/blog/blog-styles.css">
+  <link rel="stylesheet" href="/button-fix.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" media="print" onload="this.media='all'">
   <!-- Fallback for browsers that don't support onload -->
   <noscript>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="blog/blog-styles.css">
-    <link rel="stylesheet" href="button-fix.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/blog/blog-styles.css">
+    <link rel="stylesheet" href="/button-fix.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
   </noscript>
   
   <!-- Deferred JavaScript loading -->
-  <script defer src="script.js"></script>
+  <script defer src="/script.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" onload="initAOS()"></script>
   <script defer src="https://cdn.tailwindcss.com"></script>
   
@@ -129,8 +129,8 @@
 <body>
   <header class="custom-header">
     <div class="brand-logo">
-      <a href="../index.html">
-        <img src="../assets/brand-logo_cleaned.png" alt="YouTube Agency Logo" class="logo-img">
+      <a href="/">
+        <img src="/assets/brand-logo_cleaned.png" alt="YouTube Agency Logo" class="logo-img">
       </a>
     </div>
 
@@ -143,13 +143,13 @@
       </label>
       
       <ul class="nav-links">
-        <li><a href="../index.html" class="nav-link">Home</a></li>
-        <li><a href="../index.html#who-we-are" class="nav-link">Who We Are</a></li>
-        <li><a href="../index.html#why-social-media" class="nav-link">Why Social Media?</a></li>
-        <li><a href="../index.html#how-we-work" class="nav-link">How We Work</a></li>
-        <li><a href="../index.html#why-choose-us" class="nav-link">Why Choose Us</a></li>
-        <li><a href="index.html" class="nav-link active">Blog</a></li>
-        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        <li><a href="/" class="nav-link">Home</a></li>
+        <li><a href="/#who-we-are" class="nav-link">Who We Are</a></li>
+        <li><a href="/#why-social-media" class="nav-link">Why Social Media?</a></li>
+        <li><a href="/#how-we-work" class="nav-link">How We Work</a></li>
+        <li><a href="/#why-choose-us" class="nav-link">Why Choose Us</a></li>
+        <li><a href="/blog" class="nav-link active">Blog</a></li>
+        <li><a href="/#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -165,7 +165,7 @@
         <article class="blog-post" data-aos="fade-up" data-aos-delay="100">
           <div class="blog-post-inner">
             <div class="blog-meta">
-              <span class="blog-category">Algorithm</span>
+              <span class="blog-category" data-category="algorithm">Algorithm</span>
               <span class="blog-date"><i class="far fa-calendar-alt"></i> May 25, 2025</span>
             </div>
             <h2 class="blog-title"><a href="youtube-algorithm-2025.html">YouTube Algorithm in 2025: What's Changed and How to Adapt</a></h2>
@@ -177,7 +177,7 @@
         <article class="blog-post" data-aos="fade-up" data-aos-delay="200">
           <div class="blog-post-inner">
             <div class="blog-meta">
-              <span class="blog-category">Monetization</span>
+              <span class="blog-category" data-category="monetization">Monetization</span>
               <span class="blog-date"><i class="far fa-calendar-alt"></i> May 20, 2025</span>
             </div>
             <h2 class="blog-title"><a href="monetization-strategies.html">10 Proven YouTube Monetization Strategies Beyond AdSense</a></h2>
@@ -189,7 +189,7 @@
         <article class="blog-post" data-aos="fade-up" data-aos-delay="300">
           <div class="blog-post-inner">
             <div class="blog-meta">
-              <span class="blog-category">Strategy</span>
+              <span class="blog-category" data-category="strategy">Strategy</span>
               <span class="blog-date"><i class="far fa-calendar-alt"></i> May 15, 2025</span>
             </div>
             <h2 class="blog-title"><a href="content-strategy.html">Developing a Winning Content Strategy for YouTube in 2025</a></h2>
@@ -201,19 +201,19 @@
         <article class="blog-post" data-aos="fade-up" data-aos-delay="350">
           <div class="blog-post-inner">
             <div class="blog-meta">
-              <span class="blog-category">Analytics</span>
+              <span class="blog-category" data-category="analytics">Analytics</span>
               <span class="blog-date"><i class="far fa-calendar-alt"></i> May 10, 2025</span>
             </div>
-            <h2 class="blog-title"><a href="youtube-analytics.html">Understanding YouTube Analytics: Key Metrics for Channel Growth</a></h2>
+            <h2 class="blog-title"><a href="/blog/youtube-analytics.html">Understanding YouTube Analytics: Key Metrics for Channel Growth</a></h2>
             <p class="blog-excerpt">Learn how to interpret your YouTube analytics data to make informed decisions about your content strategy. Discover which metrics actually matter for growth.</p>
-            <a href="youtube-analytics.html" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+            <a href="/blog/youtube-analytics.html" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
           </div>
         </article>
 
         <article class="blog-post" data-aos="fade-up" data-aos-delay="400">
           <div class="blog-post-inner">
             <div class="blog-meta">
-              <span class="blog-category">SEO</span>
+              <span class="blog-category" data-category="seo">SEO</span>
               <span class="blog-date"><i class="far fa-calendar-alt"></i> May 5, 2025</span>
             </div>
             <h2 class="blog-title"><a href="seo-for-youtube.html">Advanced SEO Techniques for YouTube: Ranking Higher in Search Results</a></h2>
@@ -225,7 +225,7 @@
         <article class="blog-post" data-aos="fade-up" data-aos-delay="500">
           <div class="blog-post-inner">
             <div class="blog-meta">
-              <span class="blog-category">Growth</span>
+              <span class="blog-category" data-category="growth">Growth</span>
               <span class="blog-date"><i class="far fa-calendar-alt"></i> April 30, 2025</span>
             </div>
             <h2 class="blog-title"><a href="audience-retention.html">Mastering Audience Retention: Keep Viewers Watching Longer</a></h2>
@@ -237,7 +237,7 @@
         <article class="blog-post" data-aos="fade-up" data-aos-delay="600">
           <div class="blog-post-inner">
             <div class="blog-meta">
-              <span class="blog-category">Shorts</span>
+              <span class="blog-category" data-category="shorts">Shorts</span>
               <span class="blog-date"><i class="far fa-calendar-alt"></i> April 25, 2025</span>
             </div>
             <h2 class="blog-title"><a href="youtube-shorts.html">YouTube Shorts: How to Create Viral Short-Form Content</a></h2>
@@ -269,34 +269,34 @@
   <footer class="site-footer">
     <div class="footer-content">
       <div class="footer-logo">
-        <img src="assets/brand-logo_cleaned.png" alt="YouTube Agency Logo">
+        <img src="/assets/brand-logo_cleaned.png" alt="YouTube Agency Logo">
       </div>
       <div class="footer-links">
         <div class="footer-column">
           <h3>Company</h3>
           <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../index.html#who-we-are">Who We Are</a></li>
-            <li><a href="../index.html#how-we-work">How We Work</a></li>
-            <li><a href="../index.html#contact">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#who-we-are">Who We Are</a></li>
+            <li><a href="/#how-we-work">How We Work</a></li>
+            <li><a href="/#contact">Contact</a></li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>Services</h3>
           <ul>
-            <li><a href="../index.html#how-we-work">Channel Growth</a></li>
-            <li><a href="../index.html#how-we-work">Content Strategy</a></li>
-            <li><a href="../index.html#how-we-work">Monetization</a></li>
-            <li><a href="../index.html#how-we-work">Content Strategy</a></li>
-            <li><a href="../index.html#how-we-work">Monetization</a></li>
+            <li><a href="/#how-we-work">Channel Growth</a></li>
+            <li><a href="/#how-we-work">Content Strategy</a></li>
+            <li><a href="/#how-we-work">Monetization</a></li>
+            <li><a href="/#how-we-work">Content Strategy</a></li>
+            <li><a href="/#how-we-work">Monetization</a></li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>Resources</h3>
           <ul>
-            <li><a href="index.html">Blog</a></li>
-            <li><a href="youtube-algorithm-2025.html">Algorithm</a></li>
-            <li><a href="youtube-shorts.html">YouTube Shorts</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/blog/youtube-algorithm-2025.html">Algorithm</a></li>
+            <li><a href="/blog/youtube-shorts.html">YouTube Shorts</a></li>
           </ul>
         </div>
       </div>

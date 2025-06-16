@@ -4,19 +4,90 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: #1a1a1a;
+  background: linear-gradient(135deg, #2a0a0a 0%, #1a1a1a 50%, #0a0a2a 100%);
+  background-attachment: fixed;
   color: #fff;
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
+  min-height: 100vh;
 }
 
 /* Blog Navigation Overrides */
+.brand-logo img {
+  height: 120px !important;
+  width: auto;
+  max-height: 400px;
+}
+@media (max-width:768px){
+  .brand-logo img{height:100px !important;}
+}
+
 .custom-header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
-  background: linear-gradient(135deg, rgba(74, 0, 0, 0.95) 0%, rgba(139, 0, 0, 0.9) 100%);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  border-bottom: none;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Push page content below the fixed header */
+body {
+  padding-top: 80px;
+}
+
+/* Glassmorphic hamburger menu button (synced with main site) */
+.nav-trigger + label {
+  background: rgba(0, 0, 0, 0.25) !important;
+  backdrop-filter: blur(12px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(150%) !important;
+  border: 1px solid rgba(255, 215, 0, 0.35) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  border-radius: 8px !important;
+  padding: 10px !important;
+  transition: all 0.3s ease !important;
+}
+
+.nav-trigger + label:hover {
+  background: rgba(0, 0, 0, 0.35) !important;
+  border-color: rgba(255, 215, 0, 0.5) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35) !important;
+}
+
+.nav-trigger:checked + label {
+  background: rgba(0, 0, 0, 0.4) !important;
+  border-color: rgba(255, 215, 0, 0.6) !important;
+}
+
+/* Mobile menu background */
+.nav-container {
+  background: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(15px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(15px) saturate(160%) !important;
+  border-top: 1px solid rgba(255, 215, 0, 0.2) !important;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+.nav-menu {
+  background: transparent !important;
+}
+
+.nav-menu a {
+  color: #fff !important;
+  transition: all 0.3s ease !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  padding: 12px 20px !important;
+}
+
+.nav-menu a:hover {
+  background: rgba(255, 215, 0, 0.1) !important;
+  color: #FFD700 !important;
+  padding-left: 25px !important;
 }
 
 .nav-link.active {
@@ -188,16 +259,66 @@ html, body {
 }
 
 .blog-category {
-  background: linear-gradient(135deg, #FFD700, #FFA500);
-  color: #4a0000;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-weight: 600;
-  display: inline-block;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
   font-size: 0.8rem;
+  font-weight: 700;
+  color: #FFD700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 50px;
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.blog-category:hover {
+  background: rgba(255, 215, 0, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.blog-category[data-category="algorithm"] {
+  background: rgba(75, 0, 130, 0.2);
+  border-color: rgba(75, 0, 130, 0.4);
+  color: #9370DB;
+}
+
+.blog-category[data-category="monetization"] {
+  background: rgba(0, 100, 0, 0.2);
+  border-color: rgba(0, 100, 0, 0.4);
+  color: #90EE90;
+}
+
+.blog-category[data-category="strategy"] {
+  background: rgba(0, 0, 139, 0.2);
+  border-color: rgba(0, 0, 139, 0.4);
+  color: #87CEFA;
+}
+
+.blog-category[data-category="analytics"] {
+  background: rgba(128, 0, 128, 0.2);
+  border-color: rgba(128, 0, 128, 0.4);
+  color: #DDA0DD;
+}
+
+.blog-category[data-category="seo"] {
+  background: rgba(165, 42, 42, 0.2);
+  border-color: rgba(165, 42, 42, 0.4);
+  color: #F4A460;
+}
+
+.blog-category[data-category="growth"] {
+  background: rgba(0, 128, 128, 0.2);
+  border-color: rgba(0, 128, 128, 0.4);
+  color: #20B2AA;
+}
+
+.blog-category[data-category="shorts"] {
+  background: rgba(178, 34, 34, 0.2);
+  border-color: rgba(178, 34, 34, 0.4);
+  color: #FF7F50;
 }
 
 .blog-date {
@@ -273,9 +394,17 @@ html, body {
 /* Single Blog Post */
 .blog-post-container {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 40px auto;
   padding: 0 20px;
   position: relative;
+  background: rgba(15, 15, 20, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 215, 0, 0.1);
+  overflow: hidden;
+  padding-bottom: 40px;
 }
 
 .blog-post-header {
@@ -349,15 +478,14 @@ html, body {
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.8;
   font-size: 1.1rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(30, 10, 20, 0.4);
   padding: 40px;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 215, 0, 0.1);
-  margin-bottom: 40px;
-  border: 1px solid rgba(255, 215, 0, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin: 40px 20px;
+  border: 1px solid rgba(255, 215, 0, 0.1);
   position: relative;
+  transition: all 0.3s ease;
 }
 
 .blog-post-content::before {
@@ -962,8 +1090,26 @@ html, body {
   box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1), inset 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.newsletter-form input[type="email"]::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+/* Featured Image Section */
+.blog-post-featured-image {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.featured-image-category {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #FFD700;
+  margin-bottom: 8px;
+}
+
+.featured-image-icon {
+  font-size: 1.25rem;
+  color: #FFD700;
+  opacity: 0.8;
 }
 
 .newsletter-form button {
