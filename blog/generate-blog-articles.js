@@ -314,7 +314,7 @@ function generateArticleHTML(article) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <base href="/">
+  <!-- <base href="/"> -->
   <title>${article.title} | Social Brains YouTube Agency</title>
   <meta name="description" content="${article.description}">
   <meta name="keywords" content="${article.tags.join(', ')}, youtube growth, social media marketing">

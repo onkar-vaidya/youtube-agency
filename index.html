@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <base href="/">
+  <!-- <base href="/"> -->
   <title>YouTube Agency</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
@@ -11,25 +11,25 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   
-  <link rel="preload" href="assets/brand-logo_cleaned.png" as="image">
-  <link rel="preload" href="assets/red.jpeg" as="image">
+  <link rel="preload" href="./assets/brand-logo_cleaned.png" as="image">
+  <link rel="preload" href="./assets/red.jpeg" as="image">
   
 
   
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
   
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="button-fix.css">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./button-fix.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" media="print" onload="this.media='all'">
   <noscript>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="button-fix.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./button-fix.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
   </noscript>
   
-  <script defer src="script.js"></script>
+  <script defer src="./script.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" onload="initAOS()"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.3/dist/vanilla-tilt.min.js"></script>
   <script defer src="https://cdn.tailwindcss.com"></script>
@@ -49,7 +49,7 @@
 <body>
   <header class="custom-header">
     <div class="brand-logo">
-      <img src="assets/brand-logo_cleaned.png" alt="YouTube Agency Logo" class="logo-img">
+      <img src="./assets/brand-logo_cleaned.png" alt="YouTube Agency Logo" class="logo-img">
     </div>
 
     <nav class="site-nav">
@@ -66,7 +66,7 @@
         <li><a href="#why-social-media" class="nav-link">Why Social Media?</a></li>
         <li><a href="#how-we-work" class="nav-link">How We Work</a></li>
         <li><a href="#why-choose-us" class="nav-link">Why Choose Us</a></li>
-        <li><a href="/blog" class="nav-link">Blog</a></li>
+        <li><a href="./blog" class="nav-link">Blog</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
@@ -237,17 +237,17 @@
   <div class="why-choose-us-cards">
     <div class="why-choose-us-card">
       <h3 class="card-heading">DATA-DRIVEN APPROACH</h3>
-      <img src="assets/images/image1.png" alt="Data-Driven Approach Image" class="card-image">
+      <img src="./assets/images/image1.png" alt="Data-Driven Approach Image" class="card-image">
       <p class="card-description">ONLY DATA-BACKED STRATEGIES. NO SPECULATION</p>
     </div>
     <div class="why-choose-us-card">
       <h3 class="card-heading">EXPERIENCE/EXPERTISE</h3>
-      <img src="assets/images/image2.png" alt="Experience/Expertise Image" class="card-image">
+      <img src="./assets/images/image2.png" alt="Experience/Expertise Image" class="card-image">
       <p class="card-description">EXPERIENCE OF HANDLING OVER 40 MONETIZED YOUTUBE CHANNELS SUCCESSFULLY</p>
     </div>
     <div class="why-choose-us-card">
       <h3 class="card-heading">PROVEN RESULTS</h3>
-      <img src="assets/images/image3.png" alt="Proven Results Image" class="card-image">
+      <img src="./assets/images/image3.png" alt="Proven Results Image" class="card-image">
       <p class="card-description">GOT THOUSANDS OF ORGANIC LEADS FOR OUR CLIENTS</p>
     </div>
   </div>
@@ -257,7 +257,7 @@
     <h2 class="section-heading">Contact <span class="highlight-text">Us</span></h2>
     
     <div class="contact-wrapper">
-      <div class="contact-details" style="max-width: 400px;">
+      <div class="contact-details">
         <a href="tel:+918975022905" class="contact-item" aria-label="Call our first phone number">
           <div class="contact-icon"><i class="fas fa-phone"></i></div>
           <div class="contact-text">
@@ -280,32 +280,33 @@
         </a>
       </div>
       
-      <div class="contact-form-container" data-aos="fade-up" data-aos-delay="200">
+      <div class="contact-form-container">
         <form id="contactForm" class="contact-form">
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required />
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
           </div>
           
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required />
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
           </div>
           
           <div class="form-group">
             <label for="phone">Phone (Optional)</label>
-            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" />
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
           </div>
           
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="How can we help you?" rows="8" required style="min-height: 150px;"></textarea>
+            <textarea id="message" name="message" placeholder="How can we help you?" rows="5" required></textarea>
           </div>
           
-          <button type="submit" class="submit-button">
-            <span>Send Message</span>
-            <i class="fas fa-paper-plane"></i>
-          </button>
+          <div class="contact-buttons">
+            <button type="submit" class="submit-button primary">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </div>
         </form>
       </div>
     </div>
@@ -314,7 +315,7 @@
       <div class="popup-content">
         <i class="fas fa-check-circle popup-icon"></i>
         <h3>Thank You!</h3>
-        <p>Your message has been sent successfully. We'll get back to you as soon as possible.</p>
+        <p>Your message has been sent successfully. We'll get back to you soon.</p>
         <button id="closePopup" class="close-popup">Close</button>
       </div>
     </div>

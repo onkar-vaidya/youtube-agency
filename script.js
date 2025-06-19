@@ -105,6 +105,26 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    const isClickInsideNav = document.querySelector('.site-nav').contains(e.target);
+    const isHamburger = e.target.closest('.nav-trigger, label[for="nav-trigger"]');
+    
+    if (navTrigger.checked && !isClickInsideNav && !isHamburger) {
+      navTrigger.checked = false;
+      document.body.style.overflow = '';
+    }
+  });
+
+  // Prevent event propagation on the menu itself to avoid immediate closing
+  const siteNav = document.querySelector('.site-nav');
+  if (siteNav) {
+    siteNav.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  }
+
+  // Toggle body overflow when menu is toggled
   navTrigger.addEventListener('change', () => {
     document.body.style.overflow = navTrigger.checked ? 'hidden' : '';
   });
@@ -170,6 +190,36 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   }, isMobile ? 200 : 100));
+
+  // Header scroll behavior
+  const header = document.querySelector('.custom-header');
+  let lastScroll = 0;
+  const scrollThreshold = 100; // Minimum scroll amount before header hides
+  
+  window.addEventListener('scroll', throttle(() => {
+    if (isNavigating) return;
+    
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll <= 0) {
+      // At the top of the page
+      header.classList.remove('hide-header');
+      header.classList.add('show-header');
+      return;
+    }
+    
+    if (currentScroll > lastScroll && currentScroll > scrollThreshold) {
+      // Scrolling down
+      header.classList.add('hide-header');
+      header.classList.remove('show-header');
+    } else if (currentScroll < lastScroll) {
+      // Scrolling up
+      header.classList.remove('hide-header');
+      header.classList.add('show-header');
+    }
+    
+    lastScroll = currentScroll;
+  }, 100));
 
   const contactForm = document.getElementById('contactForm');
   const popupMessage = document.getElementById('popupMessage');
