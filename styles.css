@@ -20,6 +20,16 @@
   padding: 0;
 }
 
+/* How We Work Section */
+#how-we-work {
+  padding: 0;
+  margin: 0;
+}
+
+#how-we-work .section-heading {
+  margin-bottom: 1rem;
+}
+
 html, body {
   margin: 0;
   padding: 0;
