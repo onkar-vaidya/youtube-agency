@@ -2947,6 +2947,17 @@ section h2::after {
   letter-spacing: 1px;
 }
 
+/* Favicon styling */
+link[rel="icon"] {
+  border-radius: 50% !important;
+  border: 2px solid #FFD700 !important;
+  overflow: hidden !important;
+  object-fit: cover !important;
+  width: 32px !important;
+  height: 32px !important;
+  background: white !important;
+}
+
 /* CTA button styles removed */
 
 /* Tablet and Desktop Styles */
