@@ -315,7 +315,7 @@ function generateArticleHTML(article) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <!-- <base href="/"> -->
-  <title>${article.title} | Social Brains YouTube Agency</title>
+  <title>${article.title} | SooperBlooper YouTube Agency</title>
   <meta name="description" content="${article.description}">
   <meta name="keywords" content="${article.tags.join(', ')}, youtube growth, social media marketing">
   <link rel="stylesheet" href="styles.css"/>
@@ -472,7 +472,7 @@ function generateArticleHTML(article) {
       
       <p>Remember that while implementing these strategies is important, authenticity and consistency remain the foundation of YouTube success. Stay true to your unique voice while applying these best practices.</p>
       
-      <p>At Social Brains, we help YouTube creators and brands develop and implement effective ${article.category.toLowerCase()} strategies that drive sustainable growth. If you need personalized guidance for your channel, <a href="/#contact">contact us</a> for a consultation.</p>
+      <p>At SooperBlooper, we help YouTube creators and brands develop and implement effective ${article.category.toLowerCase()} strategies that drive sustainable growth. If you need personalized guidance for your channel, <a href="/#contact">contact us</a> for a consultation.</p>
     </div>
 
     <div class="blog-post-tags">
@@ -485,7 +485,7 @@ function generateArticleHTML(article) {
       </div>
       <div class="blog-author-info">
         <h3>${article.author}</h3>
-        <p>${article.author} is a YouTube strategy expert at Social Brains with extensive experience in ${article.category.toLowerCase()}. They have helped numerous channels grow and succeed through effective content strategies.</p>
+        <p>${article.author} is a YouTube strategy expert at SooperBlooper with extensive experience in ${article.category.toLowerCase()}. They have helped numerous channels grow and succeed through effective content strategies.</p>
       </div>
     </div>
 
@@ -547,7 +547,7 @@ function generateArticleHTML(article) {
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 Social Brains YouTube Agency. All rights reserved.</p>
+      <p>&copy; 2025 SooperBlooper YouTube Agency. All rights reserved.</p>
     </div>
   </footer>
 
