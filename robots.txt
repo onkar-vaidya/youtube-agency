@@ -1,15 +1,6 @@
-# robots.txt for sooperblooper.in
-# Learn more: https://developers.google.com/search/docs/crawling-indexing/robots/intro
-
 User-agent: *
-# Block build/dependency folders that are not served publicly
 Disallow: /node_modules/
 Disallow: /dist/
-
-# Clean tracking parameters so URLs are canonicalised (supported by Google only)
-# Clean-param: parameter1&parameter2 /path/
-
-# Default allow all other content
 Allow: /
 
 Sitemap: https://sooperblooper.in/sitemap.xml
