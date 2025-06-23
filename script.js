@@ -275,32 +275,47 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 500);
 
       // Send data to Google Sheets in the background
+      // Using no-cors mode since we can't control the server's CORS headers
+      // In this mode, we can't read the response, but the request will still go through
       fetch(SHEET_ENDPOINT, {
         method: 'POST',
         mode: 'no-cors',
         headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify(payload),
-        credentials: 'omit'
+        body: JSON.stringify(payload)
       })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.text();
+      // In no-cors mode, we can't read the response or catch network errors
+      // So we'll assume the submission was successful if we get here
+      .then(() => {
+        console.log('Form submission attempted (response not readable in no-cors mode)');
+        // No need to show error since we can't determine success/failure
       })
       .catch((err) => {
         console.error('Form submission error:', err);
-        // Show error message to user
+        // This will only catch network errors, not HTTP errors
         const errorMsg = document.createElement('div');
         errorMsg.className = 'error-message';
         errorMsg.style.color = 'red';
         errorMsg.style.marginTop = '10px';
-        errorMsg.textContent = 'Failed to send message. Please try again.';
+        errorMsg.style.textAlign = 'center';
+        errorMsg.style.padding = '10px';
+        errorMsg.style.borderRadius = '5px';
+        errorMsg.style.backgroundColor = 'rgba(255, 0, 0, 0.1)';
+        errorMsg.textContent = 'Network error. Please check your connection and try again.';
+        
+        // Only show one error message at a time
+        const existingError = contactForm.querySelector('.error-message');
+        if (existingError) {
+          contactForm.removeChild(existingError);
+        }
+        
         contactForm.appendChild(errorMsg);
-        setTimeout(() => errorMsg.remove(), 5000);
+        setTimeout(() => {
+          if (errorMsg.parentNode === contactForm) {
+            contactForm.removeChild(errorMsg);
+          }
+        }, 5000);
       });
     });
     
