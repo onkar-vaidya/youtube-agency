@@ -226,6 +226,7 @@ body::before {
   box-shadow: none !important;
   margin-top: 60px !important;
   padding: 40px 20px 20px !important;
+  border: 3px solid red !important; /* DEBUG: Remove after testing */
 }
 
 .footer-content {
@@ -445,6 +446,8 @@ body::before {
   
   .site-footer {
     padding: 30px 15px 15px !important;
+    background: #2a0a0a !important; /* fallback for mobile */
+    border: 3px solid orange !important; /* DEBUG: Remove after testing */
   }
   
   .footer-logo {
