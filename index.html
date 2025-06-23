@@ -30,13 +30,45 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://sooperblooper.in/#organization",
     "name": "SooperBlooper",
     "url": "https://sooperblooper.in/",
-    "logo": "https://sooperblooper.in/assets/brand-logo_cleaned.png"
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sooperblooper.in/assets/brand-logo_cleaned.png",
+      "width": "600",
+      "height": "600"
+    },
+    "image": "https://sooperblooper.in/assets/brand-logo_cleaned.png",
+    "sameAs": [
+      "https://www.instagram.com/sooperbloopers",
+      "https://twitter.com/sooperblooper",
+      "https://www.linkedin.com/company/sooperblooper",
+      "https://www.youtube.com/@SocialBrainsYT"
+    ]
   }
   </script>
   <link rel="icon" type="image/png" href="./assets/images/SooperBlooperLogo-removebg.png" id="favicon">
   <link rel="canonical" href="https://sooperblooper.in/" />
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://sooperblooper.in/#website",
+    "url": "https://sooperblooper.in/",
+    "name": "SooperBlooper",
+    "description": "Data-Driven YouTube Growth Agency - Transform your YouTube presence with our expert strategies and creative solutions.",
+    "publisher": {
+      "@id": "https://sooperblooper.in/#organization"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://sooperblooper.in/blog/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
   
   <!-- Social Media Profile Links -->
   <link rel="me" href="https://www.instagram.com/sooperbloopers" type="text/html">
