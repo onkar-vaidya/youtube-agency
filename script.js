@@ -259,22 +259,48 @@ document.addEventListener('DOMContentLoaded', function() {
         timestamp: new Date().toISOString()
       };
 
-      // Show success message IMMEDIATELY
-      popupMessage.style.display = 'flex';
-      contactForm.reset();
-      setTimeout(() => closePopup(), 3000);
+      // Show loading state
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+      // Show success message after a short delay
+      setTimeout(() => {
+        popupMessage.style.display = 'flex';
+        contactForm.reset();
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+        setTimeout(() => closePopup(), 3000);
+      }, 500);
 
       // Send data to Google Sheets in the background
       fetch(SHEET_ENDPOINT, {
         method: 'POST',
-        mode: 'no-cors', // prevent CORS errors; response not accessible but request succeeds
+        mode: 'no-cors',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
-        body: JSON.stringify(payload)
+        body: JSON.stringify(payload),
+        credentials: 'omit'
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();
       })
       .catch((err) => {
-        console.error('Sheets request failed', err);
+        console.error('Form submission error:', err);
+        // Show error message to user
+        const errorMsg = document.createElement('div');
+        errorMsg.className = 'error-message';
+        errorMsg.style.color = 'red';
+        errorMsg.style.marginTop = '10px';
+        errorMsg.textContent = 'Failed to send message. Please try again.';
+        contactForm.appendChild(errorMsg);
+        setTimeout(() => errorMsg.remove(), 5000);
       });
     });
     
