@@ -259,6 +259,12 @@ document.addEventListener('DOMContentLoaded', function() {
         timestamp: new Date().toISOString()
       };
 
+      // Show success message IMMEDIATELY
+      popupMessage.style.display = 'flex';
+      contactForm.reset();
+      setTimeout(() => closePopup(), 3000);
+
+      // Send data to Google Sheets in the background
       fetch(SHEET_ENDPOINT, {
         method: 'POST',
         mode: 'no-cors', // prevent CORS errors; response not accessible but request succeeds
@@ -269,14 +275,6 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       .catch((err) => {
         console.error('Sheets request failed', err);
-      })
-      .finally(() => {
-        // Show success message
-        popupMessage.style.display = 'flex';
-        // Reset form
-        contactForm.reset();
-        // Automatically close the popup after 5 seconds
-        setTimeout(() => closePopup(), 5000);
       });
     });
     
