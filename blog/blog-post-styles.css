@@ -229,6 +229,24 @@ body::before {
 }
 
 /* Responsive Design */
+
+/* Mobile spacing tweaks */
+@media (max-width: 480px) {
+  .blog-share {
+    margin-top: 15px !important;
+    padding-top: 10px !important;
+    margin-bottom: 0 !important;
+  }
+  .site-footer {
+    margin-top: 30px !important;
+    padding-top: 20px !important;
+  }
+  .blog-post-content p:last-child,
+  .blog-post-content section:last-child {
+    margin-bottom: 20px !important;
+  }
+}
+
 @media (max-width: 768px) {
   .blog-post {
     padding: 30px 15px;
