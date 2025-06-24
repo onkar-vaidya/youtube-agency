@@ -19,13 +19,13 @@ body::before {
   height: 100%;
   background: #5a0000 url('../assets/red.jpeg') center/cover no-repeat fixed;
   z-index: -1;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .blog-post {
   max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 20px;
+  margin: 0 auto;
+  padding: 1rem 10px;
   position: relative;
   z-index: 1;
 }
@@ -36,13 +36,12 @@ body::before {
 }
 
 .blog-post-content {
-  background: rgba(255, 243, 205, 0.1); /* transparent cream */
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  padding: 2.5rem;
-  border-radius: 8px;
+  background: transparent;
+  padding: 1rem 0;
   line-height: 1.8;
   color: #fffbe6;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .blog-post-title {
@@ -108,7 +107,7 @@ body::before {
 }
 
 .blog-post-content blockquote {
-  background: rgba(255, 230, 120, 0.1);
+  background: rgba(90, 0, 0, 0.55);
   backdrop-filter: blur(15px);
   border-left: 4px solid #ffcc00;
   padding: 20px 30px;
@@ -161,6 +160,69 @@ body::before {
   box-shadow: 0 5px 15px rgba(90, 0, 0, 0.3);
 }
 
+/* Related Posts Section */
+
+/* Simplified layout: turn grid of cards into plain list */
+.related-posts .blog-grid {
+  display: block !important; /* stack items vertically */
+  margin: 0 !important;
+}
+
+.related-posts .blog-card {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0 0 25px 0 !important;
+  transition: none !important;
+}
+
+.related-posts .blog-card::before,
+.related-posts .blog-card:hover::before {
+  display: none !important;
+}
+
+.related-posts .blog-card-content {
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+.related-posts .blog-card-category,
+.related-posts .read-more {
+  display: none !important;
+}
+
+.related-posts .blog-card h3 {
+  font-size: 1rem !important;
+  margin: 0 0 8px !important;
+}
+
+.related-posts .blog-card p {
+  margin: 0 0 8px !important;
+  color: #ccc !important;
+  font-size: 0.875rem !important;
+}
+
+
+.related-posts .container {
+  padding: 0 20px !important;
+}
+
+.related-posts .section-title,
+.blog-related-posts h2 {
+  text-align: right !important;
+  margin: 60px auto 30px !important;
+}
+
+
+/* Override related article title link color */
+.blog-card h3 a {
+  color: #ff4d4d !important; /* thematic red */
+}
+
+.blog-card h3 a:hover {
+  color: #FFD700 !important; /* gold on hover */
+}
+
 /* Hide Author Section */
 .blog-author {
   display: none !important;
@@ -169,7 +231,7 @@ body::before {
 /* Responsive Design */
 @media (max-width: 768px) {
   .blog-post {
-    padding: 30px 20px;
+    padding: 30px 15px;
     margin: 20px 10px;
   }
 
@@ -187,7 +249,35 @@ body::before {
 }
 
 /* ---- BLOG POST PAGE: Remove card/glass styling and unify header/content ---- */
-.blog-post-container,
+
+.blog-post {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Consistent width for header and content containers */
+.blog-post-container .container {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 15px;
+}
+.blog-post-header .container, .blog-post-content .container, .blog-post > .container, .blog-post-container > .container {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 15px;
+}
+.blog-post-container {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .blog-post,
 .blog-post-content,
 .blog-post-header {
@@ -198,11 +288,16 @@ body::before {
 }
 
 .blog-post-header {
-  text-align: left;
-  margin-top: 90px;
-  margin-bottom: 20px;
-  padding: 0;
-  border-bottom: none;
+  text-align: center !important;
+  margin-top: 60px !important;
+  margin-bottom: 40px !important;
+  padding: 0 15px !important;
+  border-bottom: none !important;
+}
+
+.blog-post-title {
+  text-align: center !important;
+  margin: 20px 0 30px !important;
 }
 
 .blog-post-content {
@@ -226,7 +321,6 @@ body::before {
   box-shadow: none !important;
   margin-top: 60px !important;
   padding: 40px 20px 20px !important;
-  border: 3px solid red !important; /* DEBUG: Remove after testing */
 }
 
 .footer-content {
@@ -446,8 +540,8 @@ body::before {
   
   .site-footer {
     padding: 30px 15px 15px !important;
-    background: #2a0a0a !important; /* fallback for mobile */
-    border: 3px solid orange !important; /* DEBUG: Remove after testing */
+    background: transparent !important;
+    border: none !important;
   }
   
   .footer-logo {
@@ -502,13 +596,14 @@ body::before {
 
 .blog-nav-links {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   position: relative;
   width: 100%;
-  margin: 15px 0;
+  margin: 25px 0;
+  padding: 0 10px;
 }
 
 .page-numbers {
@@ -526,59 +621,158 @@ body::before {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: rgba(255, 215, 0, 0.12);
-  color: #a76a00;
-  border: none;
-  font-size: 1.15rem;
-  font-weight: 700;
+  background-color: rgba(255, 215, 0, 0.2);
+  color: #ffd700;  /* Brighter gold for better visibility */
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  font-size: 1rem;
+  font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(255, 204, 0, 0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .page-number:hover {
-  background-color: rgba(255, 215, 0, 0.25);
-  color: #b88400;
+  background-color: rgba(255, 215, 0, 0.4);
+  color: #fff;  /* White text on hover for better contrast */
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(255, 204, 0, 0.15);
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.2);
+  border-color: #ffd700;
 }
 
 .page-number.current {
   background-color: #ffd700;
-  color: #5a0000;
-  font-weight: bold;
-  box-shadow: 0 2px 8px rgba(255, 204, 0, 0.18);
+  color: #000;  /* Black text for current page for maximum contrast */
+  font-weight: 700;
+  box-shadow: 0 2px 12px rgba(255, 215, 0, 0.3);
+  border-color: #ffd700;
+  transform: scale(1.1);
 }
 
+/* Pagination Navigation Buttons */
 .blog-nav-button {
   display: inline-flex;
   align-items: center;
-  padding: 8px 16px;
-  background-color: rgba(255, 215, 0, 0.12);
-  color: #a76a00;
-  border: none;
-  border-radius: 20px;
+  padding: 10px 20px;
+  background: rgba(255, 215, 0, 0.1);
+  color: #ffd700;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 25px;
   font-weight: 500;
   text-decoration: none;
-  transition: all 0.3s ease;
   position: relative;
-  box-shadow: 0 2px 8px rgba(255, 204, 0, 0.04);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  min-width: 90px;
+  justify-content: center;
+}
+
+.blog-nav-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.4));
+  z-index: 0;
+  border-radius: 25px;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transform: translateX(-100%);
+}
+
+.blog-nav-button:hover::before {
+  transform: translateX(0);
+}
+
+.blog-nav-button.prev::before {
+  transform: translateX(100%);
+}
+
+.blog-nav-button.prev:hover::before {
+  transform: translateX(0);
+}
+
+.blog-nav-button span,
+.blog-nav-button i {
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
 }
 
 .blog-nav-button:hover {
-  background-color: #ffd700;
-  color: #5a0000;
+  color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(255, 204, 0, 0.18);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+  border-color: rgba(255, 215, 0, 0.5);
 }
 
+/* Next/Previous button icons */
 .blog-nav-button i {
-  margin-right: 8px;
-  transition: transform 0.3s ease;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+  margin: 0 5px;
 }
 
-.blog-nav-button:hover i {
-  transform: translateX(-3px);
+/* Previous button icon */
+.blog-nav-button.prev i {
+  margin-right: 8px;
+  transform: translateX(0);
+}
+
+/* Next button icon */
+.blog-nav-button.next i {
+  margin-left: 8px;
+  transform: translateX(0);
+}
+
+/* Previous button fill from right to left */
+.blog-nav-button.prev {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  color: #fff; /* or whatever text color */
+  z-index: 1;
+}
+
+/* Before pseudo-element: initial hidden bar from right */
+.blog-nav-button.prev::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2); /* your hover color */
+  transform: scaleX(0);
+  transform-origin: right center; /* animate from right */
+  transition: transform 0.3s ease;
+  z-index: -1; /* stay behind text */
+}
+
+/* Hover state: animate fill from right to left */
+.blog-nav-button.prev:hover::before {
+  transform: scaleX(1);
+}
+
+
+/* Next button fill from left to right */
+.blog-nav-button.next::before {
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.blog-nav-button.next:hover::before {
+  transform: scaleX(1);
+}
+
+/* Icon animations */
+.blog-nav-button:hover i.prev {
+  transform: translateX(-5px);
+}
+
+.blog-nav-button:hover i.next {
+  transform: translateX(5px);
 }
 
 

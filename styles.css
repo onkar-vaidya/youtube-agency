@@ -3534,13 +3534,29 @@ link[rel="icon"] {
   box-shadow: 0 6px 20px rgba(255,215,0,0.4);
 }
 
-/* === Footer Styles === */
+/* ===== Unified Section Headings ===== */
+.who-we-are-heading,
+.why-choose-us-heading,
+.section-heading {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
+  letter-spacing: 0.5px !important;
+  margin: 0 auto 60px auto !important;
+}
+
+/* ===== Footer Styles ===== */
 .site-footer {
   background: transparent !important;
   color: #fff;
   padding: 3rem 1rem 2rem;
   font-family: 'Montserrat', sans-serif;
+  border: none !important;
   border-top: none !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 .site-footer a {
@@ -3616,10 +3632,12 @@ link[rel="icon"] {
   text-align: center;
   margin-top: 40px;
   padding-top: 20px;
-  border-top: none !important;
+  border-top: 1px solid rgba(255, 215, 0, 0.2) !important;
   background: transparent !important;
   font-size: 0.9rem;
   color: rgba(255,255,255,0.8);
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 @media (max-width: 768px) {
