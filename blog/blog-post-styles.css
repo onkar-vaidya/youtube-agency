@@ -62,8 +62,13 @@ body::before {
   box-shadow: 0 5px 15px rgba(90, 0, 0, 0.4);
 }
 
+.blog-post-content h1,
 .blog-post-content h2,
-.blog-post-content h3 {
+.blog-post-content h3,
+.blog-post-content h4,
+.blog-post-content h5,
+.blog-post-content h6 {
+  text-align: left !important;
   color: #ffcc00;
   font-weight: 600;
   margin: 40px 0 20px;
@@ -306,7 +311,7 @@ body::before {
 }
 
 .blog-post-header {
-  text-align: center !important;
+  text-align: left !important;
   margin-top: 60px !important;
   margin-bottom: 40px !important;
   padding: 0 15px !important;
@@ -314,7 +319,7 @@ body::before {
 }
 
 .blog-post-title {
-  text-align: center !important;
+  text-align: left !important;
   margin: 20px 0 30px !important;
 }
 
