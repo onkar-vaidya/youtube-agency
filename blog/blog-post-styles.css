@@ -597,7 +597,9 @@ body::before {
     flex-direction: row !important;
     flex-wrap: nowrap !important;
     gap: 4px !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
+    overflow-x: auto;
+    padding-bottom: 10px;
     align-items: center !important;
     width: 100% !important;
     margin: 8px 0 0 0 !important;
@@ -705,7 +707,7 @@ body::before {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
   width: 100%;
@@ -715,7 +717,9 @@ body::before {
 
 .page-numbers {
   display: flex;
-  gap: 10px;
+  gap: 6px;
+  margin: 0;
+  padding: 0 10px;
   justify-content: center;
   align-items: center;
   margin: 0 15px;
