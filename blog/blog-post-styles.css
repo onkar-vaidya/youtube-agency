@@ -199,6 +199,37 @@ body::before {
   box-shadow: 0 5px 15px rgba(90, 0, 0, 0.3);
 }
 
+/* Blog Post CTA Styling */
+.blog-post-cta {
+  text-align: center;
+  margin: 50px 0;
+  padding: 0 20px;
+}
+
+.blog-post-cta .cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  background: #FFD700;
+  color: #4a0000;
+  border: 2px solid #FFD700;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.blog-post-cta .cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+  background: #FFE44D;
+  border-color: #FFE44D;
+}
+
 /* Related Posts Section */
 
 /* Simplified layout: turn grid of cards into plain list */
