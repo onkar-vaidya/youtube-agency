@@ -240,6 +240,7 @@
 
 </div>
 </div>
+<div id="related-articles-placeholder"></div>
 <div id="footer-include"></div>
 <script src="../js/include-footer.js"></script>
 <script>
@@ -250,6 +251,13 @@
         once: true
       });
     });
+  </script>
+<script>
+    fetch('related-articles.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('related-articles-placeholder').innerHTML = data;
+      });
   </script>
 </body>
 </html>

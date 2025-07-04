@@ -191,35 +191,54 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }, isMobile ? 200 : 100));
 
-  // Header scroll behavior
-  const header = document.querySelector('.custom-header');
-  let lastScroll = 0;
-  const scrollThreshold = 100; // Minimum scroll amount before header hides
-  
-  window.addEventListener('scroll', throttle(() => {
-    if (isNavigating) return;
-    
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll <= 0) {
-      // At the top of the page
-      header.classList.remove('hide-header');
-      header.classList.add('show-header');
-      return;
+  // Header scroll behavior (works for static and dynamically loaded headers)
+  (function() {
+    let lastScroll = 0;
+    const scrollThreshold = 100; // Minimum scroll amount before header hides
+    function throttle(func, limit) {
+      let inThrottle;
+      return function() {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+          func.apply(context, args);
+          inThrottle = true;
+          setTimeout(() => inThrottle = false, limit);
+        }
+      };
     }
-    
-    if (currentScroll > lastScroll && currentScroll > scrollThreshold) {
-      // Scrolling down
-      header.classList.add('hide-header');
-      header.classList.remove('show-header');
-    } else if (currentScroll < lastScroll) {
-      // Scrolling up
-      header.classList.remove('hide-header');
-      header.classList.add('show-header');
+    function applyHeaderScrollAnimation(header) {
+      if (!header) return;
+      window.addEventListener('scroll', throttle(() => {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll <= 0) {
+          header.classList.remove('hide-header');
+          header.classList.add('show-header');
+          return;
+        }
+        if (currentScroll > lastScroll && currentScroll > scrollThreshold) {
+          header.classList.add('hide-header');
+          header.classList.remove('show-header');
+        } else if (currentScroll < lastScroll) {
+          header.classList.remove('hide-header');
+          header.classList.add('show-header');
+        }
+        lastScroll = currentScroll;
+      }, 100));
     }
-    
-    lastScroll = currentScroll;
-  }, 100));
+    // Initial static header
+    let header = document.querySelector('.custom-header');
+    if (header) applyHeaderScrollAnimation(header);
+    // Watch for dynamically inserted headers
+    const observer = new MutationObserver(() => {
+      const newHeader = document.querySelector('.custom-header');
+      if (newHeader && newHeader !== header) {
+        header = newHeader;
+        applyHeaderScrollAnimation(header);
+      }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+  })();
 
   const contactForm = document.getElementById('contactForm');
   const popupMessage = document.getElementById('popupMessage');
@@ -337,4 +356,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
-
