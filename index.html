@@ -392,3 +392,232 @@
     });
   </script>
 <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.3/dist/vanilla-tilt.min.js"></script>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img alt="SooperBlooper Logo" loading="lazy" src="./assets/brand-logo_cleaned.png"/>
+      </div>
+      <div class="footer-links">
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#who-we-are">Who We Are</a></li>
+            <li><a href="#how-we-work">How We Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#how-we-work">Channel Growth</a></li>
+            <li><a href="#how-we-work">Content Strategy</a></li>
+            <li><a href="#how-we-work">Monetization</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="./blog">Blog</a></li>
+            <li><a href="./blog/youtube-algorithm-2025.html">Algorithm</a></li>
+            <li><a href="./blog/youtube-shorts.html">YouTube Shorts</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-social">
+        <a aria-label="WhatsApp" href="https://wa.me/917498445014" rel="noopener noreferrer" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a aria-label="X (formerly Twitter)" href="https://x.com/SooperBloopers" rel="noopener noreferrer" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a aria-label="Instagram" href="https://www.instagram.com/sooperbloopers" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a aria-label="LinkedIn" href="https://linkedin.com/company/sooperblooper" rel="noopener noreferrer" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a aria-label="YouTube" href="https://www.youtube.com/@SocialBrainsYT" rel="noopener noreferrer" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 SooperBlooper. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <style>
+    /* Footer Styles */
+    .site-footer {
+      background: transparent !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      border-top: none !important;
+      box-shadow: none !important;
+      padding: 40px 20px 20px !important;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-logo {
+      flex: 0 0 250px;
+      margin-bottom: 0;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    .footer-logo img {
+      max-width: 220px;
+      max-height: 70px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 5px rgba(255, 204, 0, 0.3)) !important;
+      transition: none;
+    }
+
+    .footer-links {
+      flex: 1 1 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-column {
+      flex: 1 1 160px;
+      min-width: 160px;
+    }
+
+    .footer-column h3 {
+      color: #FFD700 !important;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-column h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: linear-gradient(to right, #FFD700, transparent);
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-column li {
+      margin-bottom: 10px;
+    }
+
+    .footer-column a {
+      color: #fffbe6 !important;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+      display: inline-block;
+      position: relative;
+    }
+
+    .footer-column a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      bottom: -2px;
+      left: 0;
+      background-color: #FFD700;
+      transition: width 0.3s ease;
+    }
+
+    .footer-column a:hover {
+      color: #FFD700 !important;
+      transform: translateX(3px);
+    }
+
+    .footer-column a:hover::after {
+      width: 100%;
+    }
+
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+      flex: 0 0 100%;
+    }
+
+    .footer-social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 204, 0, 0.15) !important;
+      color: #FFD700 !important;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 204, 0, 0.3) !important;
+    }
+
+    .footer-social a:hover {
+      background: rgba(255, 204, 0, 0.3) !important;
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(255, 204, 0, 0.2) !important;
+      color: #fff !important;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 204, 0, 0.15) !important;
+      color: rgba(255, 255, 255, 0.7) !important;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+      .footer-logo {
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+      .footer-social {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .footer-content {
+        gap: 15px;
+      }
+      .footer-logo {
+        margin-bottom: 15px;
+      }
+      .footer-links {
+        gap: 15px;
+      }
+    }
+  </style>
