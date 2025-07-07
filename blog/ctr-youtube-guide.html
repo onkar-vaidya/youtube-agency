@@ -306,22 +306,19 @@
     </div>
   </div>
 </div>
-<a class="cta-button" href="/#contact">Contact Us Today</a>
-<div class="blog-post-navigation">
-  <div class="blog-nav-links" data-page="8">
-    <a class="blog-nav-button" href="./youtube-analytics.html"><i class="fas fa-arrow-left"></i> Previous</a>
-    <div class="page-numbers">
-      <a class="page-number" href="./audience-retention.html">1</a>
-      <a class="page-number" href="./content-strategy.html">2</a>
-      <a class="page-number" href="./seo-for-youtube.html">3</a>
-      <a class="page-number" href="./youtube-shorts.html">4</a>
-      <a class="page-number" href="./youtube-algorithm-2025.html">5</a>
-      <a class="page-number" href="./youtube-analytics.html">6</a>
-      <a class="page-number" href="./monetization-strategies.html">7</a>
-      <a class="page-number current" href="./ctr-youtube-guide.html">8</a>
-    </div>
-  </div>
+<div class="blog-post-cta" style="text-align: center; margin: 40px 0;">
+  <a class="cta-button" href="../index.html#contact">Contact Us Today</a>
 </div>
+
+<div id="related-articles-placeholder"></div>
+<script>
+fetch('related-articles.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('related-articles-placeholder').innerHTML = data;
+  });
+</script>
+
 <!-- Footer Include -->
 <div id="footer-include"></div>
 <!-- JavaScript -->

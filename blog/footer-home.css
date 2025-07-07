@@ -1,4 +1,4 @@
-/* Shared Blog Footer Styles (from blog-post-styles.css) */
+/* Home Page Footer Styles */
 
 /* Sticky footer support: ensure body uses flex layout */
 html, body {
@@ -33,9 +33,8 @@ body {
 }
 
 .footer-logo {
-  flex: 0 0 400px;
-  margin: 0;
-  padding: 0;
+  flex: 0 0 250px;
+  margin-bottom: 0;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -44,15 +43,13 @@ body {
 }
 
 .footer-logo img {
-  max-width: 380px;
-  max-height: 120px;
+  max-width: 220px;
+  max-height: 70px;
   width: auto;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 2px 5px rgba(255, 204, 0, 0.3)) !important;
   transition: none;
-  margin: 0;
-  padding: 0;
 }
 
 .footer-links {
