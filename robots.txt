@@ -1,5 +1,13 @@
 User-agent: *
 Allow: /
+Allow: /favicon.ico
+Allow: /site.webmanifest
+Allow: /browserconfig.xml
+Allow: /*.png$
+Allow: /*.ico$
+
+# Cache control for search engines
+Sitemap: https://sooperblooper.in/sitemap.xml
 
 # Disallow problematic URLs
 Disallow: /blog/?s=
