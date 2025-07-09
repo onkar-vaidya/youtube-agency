@@ -23,9 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   if (playButton) {
-    playButton.addEventListener('click', function() {
-      alert('Video feature coming soon!');
-    });
+    // Removed alert for 'Video feature coming soon!'
+    // playButton.addEventListener('click', function() {
+    //   alert('Video feature coming soon!');
+    // });
   }
   
   const heroScrollIndicator = document.querySelector('.hero-scroll-indicator a');
