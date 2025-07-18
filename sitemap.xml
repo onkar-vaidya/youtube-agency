@@ -2,74 +2,174 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sooperblooper.in/</loc>
-    <lastmod>2025-07-07</lastmod>
+    <lastmod>2025-07-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://sooperblooper.in/blog/</loc>
-    <lastmod>2025-07-07</lastmod>
+    <lastmod>2025-07-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://sooperblooper.in/blog/1000-subs-4000-hours.html</loc>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://sooperblooper.in/blog/audience-retention.html</loc>
-    <lastmod>2025-06-26</lastmod>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sooperblooper.in/blog/best-video-editing-software-for-youtube.html</loc>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sooperblooper.in/blog/content-is-king.html</loc>
+    <lastmod>2025-07-18</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sooperblooper.in/blog/content-strategy.html</loc>
-    <lastmod>2025-06-26</lastmod>
+    <lastmod>2025-07-18</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sooperblooper.in/blog/ctr-youtube-guide.html</loc>
-    <lastmod>2025-06-26</lastmod>
+    <lastmod>2025-07-18</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://sooperblooper.in/blog/monetization-strategies.html</loc>
-    <lastmod>2025-06-26</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://sooperblooper.in/blog/seo-for-youtube.html</loc>
-    <lastmod>2025-06-26</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://sooperblooper.in/blog/youtube-algorithm-2025.html</loc>
-    <lastmod>2025-06-26</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://sooperblooper.in/blog/youtube-analytics.html</loc>
-    <lastmod>2025-06-26</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://sooperblooper.in/blog/youtube-shorts.html</loc>
-    <lastmod>2025-06-26</lastmod>
+    <loc>https://sooperblooper.in/blog/how-to-add-music-to-videos.html</loc>
+    <lastmod>2025-07-18</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sooperblooper.in/blog/how-to-choose-youtube-niche.html</loc>
-    <lastmod>2025-07-07</lastmod>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sooperblooper.in/blog/how-to-create-engaging-video-intros.html</loc>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sooperblooper.in/blog/how-to-create-youtube-channel.html</loc>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sooperblooper.in/blog/how-to-design-a-youtube-thumbnail.html</loc>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sooperblooper.in/blog/how-to-find-trending-topics.html</loc>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sooperblooper.in/blog/how-to-upload-a-video.html</loc>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sooperblooper.in/blog/how-to-use-youtube-cards-and-end-screens.html</loc>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sooperblooper.in/blog/how-to-verify-youtube-account.html</loc>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sooperblooper.in/blog/how-to-write-a-good-youtube-video-description.html</loc>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sooperblooper.in/blog/how-to-write-a-good-youtube-video-title.html</loc>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sooperblooper.in/blog/monetization-strategies.html</loc>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sooperblooper.in/blog/seo-for-youtube.html</loc>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sooperblooper.in/blog/what-are-youtube-shorts.html</loc>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sooperblooper.in/blog/what-are-youtube-tags.html</loc>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sooperblooper.in/blog/what-is-a-youtube-handle.html</loc>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sooperblooper.in/blog/what-is-youtube-studio.html</loc>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sooperblooper.in/blog/youtube-algorithm-2025.html</loc>
+    <lastmod>2025-07-18</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sooperblooper.in/blog/youtube-analytics-mastery.html</loc>
-    <lastmod>2025-07-07</lastmod>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sooperblooper.in/blog/youtube-analytics.html</loc>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sooperblooper.in/blog/youtube-content-strategy.html</loc>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sooperblooper.in/blog/youtube-equipment-guide.html</loc>
+    <lastmod>2025-07-18</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sooperblooper.in/blog/youtube-seo-ultimate-guide.html</loc>
-    <lastmod>2025-07-07</lastmod>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sooperblooper.in/blog/youtube-shorts.html</loc>
+    <lastmod>2025-07-18</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sooperblooper.in/blog/youtube-thumbnails-titles-guide.html</loc>
-    <lastmod>2025-07-07</lastmod>
+    <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sooperblooper.in/blog/youtube-video-ideas-for-beginners.html</loc>
+    <lastmod>2025-07-18</lastmod>
     <changefreq>monthly</changefreq>
   </url>
 </urlset>
