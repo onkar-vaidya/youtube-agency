@@ -1,0 +1,16 @@
+# Enable the rewrite engine
+RewriteEngine On
+
+# If the requested file or directory doesn't exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirect all non-existent URLs to the main page
+RewriteRule ^(.*)$ / [L,R=301]
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Set the default index page
+DirectoryIndex index.html

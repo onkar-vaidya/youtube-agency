@@ -5,17 +5,15 @@ Allow: /site.webmanifest
 Allow: /browserconfig.xml
 Allow: /*.png$
 Allow: /*.ico$
+Allow: /*.css$
+Allow: /*.js$
 
-# Cache control for search engines
+# Sitemap location
 Sitemap: https://sooperblooper.in/sitemap.xml
 
 # Disallow problematic URLs
 Disallow: /blog/?s=
 Disallow: /blog//
-Disallow: /blog//youtube-algorithm-2025.html
-Disallow: /blog//index.html
-Disallow: /blog//seo-for-youtube.html
-Disallow: /blog//content-strategy.html
 Disallow: /index.html
 
 # Disallow non-existent pages that are being indexed
@@ -28,12 +26,10 @@ Disallow: /blog/tag/brand-deals.html
 # Disallow HTTP version (force HTTPS)
 Disallow: http://sooperblooper.in/
 
-# Allow specific blog pages
+# Allow all blog posts
 Allow: /blog/
-Allow: /blog/youtube-algorithm-2025.html
-Allow: /blog/index.html
-Allow: /blog/seo-for-youtube.html
-Allow: /blog/content-strategy.html
-Allow: /blog/youtube-analytics.html
 
-Sitemap: https://sooperblooper.in/sitemap.xml
+# Allow all static assets
+Allow: /css/
+Allow: /js/
+Allow: /images/
