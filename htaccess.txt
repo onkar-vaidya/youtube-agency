@@ -12,6 +12,11 @@
     # Remove trailing slashes
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)/$ /$1 [L,R=301]
+    
+    # Redirect all non-existent URLs to the main page
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ / [L,R=301]
 </IfModule>
 
 # Set cache control for static files
