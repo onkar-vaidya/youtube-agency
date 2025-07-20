@@ -13,13 +13,13 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)/$ /$1 [L,R=301]
     
-    # Custom 404 Error Document
-    ErrorDocument 404 /404.html
+    # Custom 404 Error Document (PHP-based)
+    ErrorDocument 404 /404.php
     
-    # Redirect all non-existent URLs to the main page
+    # Handle non-existent files and directories
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ /404.html [L]
+    RewriteRule ^(.*)$ /404.php [L]
 </IfModule>
 
 # Set cache control for static files
