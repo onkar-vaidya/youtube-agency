@@ -1,23 +1,23 @@
-\<div align="center"\>
-\<img src="assets/brand-logo-final.png" alt="SooperBlooper Logo" width="200"/\>
-\<h1\>YOUTUBE-AGENCY\</h1\>
-\<h3\>Unleash Viral Growth, Dominate YouTube Instantly\</h3\>
-\</div\>
+<div align="center">
+  <img src="assets/brand-logo-final.png" alt="SooperBlooper Logo" width="200"/>
+  <h1>YOUTUBE-AGENCY</h1>
+  <h3>Unleash Viral Growth, Dominate YouTube Instantly</h3>
+</div>
 
-\<p align="center"\>
-\<img alt="Last Commit" src="[https://img.shields.io/github/last-commit/onkar-vaidya/youtube-agency](https://www.google.com/search?q=https://img.shields.io/github/last-commit/onkar-vaidya/youtube-agency)"\>
-\<img alt="Top Language" src="[https://img.shields.io/github/languages/top/onkar-vaidya/youtube-agency](https://www.google.com/search?q=https://img.shields.io/github/languages/top/onkar-vaidya/youtube-agency)"\>
-\<img alt="Language Count" src="[https://img.shields.io/github/languages/count/onkar-vaidya/youtube-agency](https://www.google.com/search?q=https://img.shields.io/github/languages/count/onkar-vaidya/youtube-agency)"\>
-\</p\>
+<p align="center">
+  <img alt="Last Commit" src="https://img.shields.io/github/last-commit/onkar-vaidya/youtube-agency">
+  <img alt="Top Language" src="https://img.shields.io/github/languages/top/onkar-vaidya/youtube-agency">
+  <img alt="Language Count" src="https://img.shields.io/github/languages/count/onkar-vaidya/youtube-agency">
+</p>
 
-\<p align="center"\>
-\<img src="[https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge\&logo=html5\&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/html5-%2523E34F26.svg%3Fstyle%3Dfor-the-badge%26logo%3Dhtml5%26logoColor%3Dwhite)" alt="HTML5"\>
-\<img src="[https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge\&logo=css3\&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/css3-%25231572B6.svg%3Fstyle%3Dfor-the-badge%26logo%3Dcss3%26logoColor%3Dwhite)" alt="CSS3"\>
-\<img src="[https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge\&logo=javascript\&logoColor=%23F7DF1E](https://www.google.com/search?q=https://img.shields.io/badge/javascript-%2523323330.svg%3Fstyle%3Dfor-the-badge%26logo%3Djavascript%26logoColor%3D%2523F7DF1E)" alt="JavaScript"\>
-\<img src="[https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge\&logo=tailwind-css\&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/tailwindcss-%252338B2AC.svg%3Fstyle%3Dfor-the-badge%26logo%3Dtailwind-css%26logoColor%3Dwhite)" alt="TailwindCSS"\>
-\<img src="[https://img.shields.io/badge/PostCSS-DD3735?style=for-the-badge\&logo=postcss\&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/PostCSS-DD3735%3Fstyle%3Dfor-the-badge%26logo%3Dpostcss%26logoColor%3Dwhite)" alt="PostCSS"\>
-\<img src="[https://img.shields.io/badge/Autoprefixer-DD3735?style=for-the-badge\&logo=Autoprefixer\&logoColor=white](https://www.google.com/search?q=https://img.shields.io/badge/Autoprefixer-DD3735%3Fstyle%3Dfor-the-badge%26logo%3DAutoprefixer%26logoColor%3Dwhite)" alt="Autoprefixer"\>
-\</p\>
+<p align="center">
+    <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+    <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+    <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript">
+    <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="TailwindCSS">
+    <img src="https://img.shields.io/badge/PostCSS-DD3735?style=for-the-badge&logo=postcss&logoColor=white" alt="PostCSS">
+    <img src="https://img.shields.io/badge/Autoprefixer-DD3735?style=for-the-badge&logo=Autoprefixer&logoColor=white" alt="Autoprefixer">
+</p>
 
 -----
 
